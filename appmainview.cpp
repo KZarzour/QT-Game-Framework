@@ -3,6 +3,11 @@
 AppMainView::AppMainView()
 {
     jsonUtils = new JsonUtils();
+    signupPage = new SignupPage();
+
+    this->close();
+
+    signupPage->show();
 
     /*
     QJsonDocument doc = jsonUtils->getJsonDocument();

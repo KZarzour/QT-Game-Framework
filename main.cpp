@@ -8,7 +8,7 @@ int main(int argc, char **argv){
     AppMainView * mainView = new AppMainView();
 
     mainView -> setFixedSize(800, 800);
-    mainView -> show();
+//    mainView -> show();
 
     return app.exec();
 
