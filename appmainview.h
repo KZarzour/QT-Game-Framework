@@ -7,6 +7,7 @@
 #include "Accounts_Framework/user.h"
 #include "Accounts_Framework/signuppage.h"
 #include "Accounts_Framework/mainpage.h"
+#include "Accounts_Framework/landingpage.h"
 
 class AppMainView : public QGraphicsView
 {
@@ -16,6 +17,7 @@ public:
 
     JsonUtils *jsonUtils;
     SignupPage *signupPage;
+    LandingPage *landingPage;
     mainPage *menuPage;
 
     void connectButtons();

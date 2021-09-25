@@ -5,8 +5,8 @@ AppMainView::AppMainView()
     jsonUtils = new JsonUtils();
     signupPage = new SignupPage();
     menuPage = new mainPage();
-
-    signupPage->show();
+    landingPage=new LandingPage();
+    landingPage->show();
 
     connectButtons();
 }
