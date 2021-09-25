@@ -9,16 +9,17 @@ class LandingPage : public QWidget
     Q_OBJECT
 public:
     explicit LandingPage(QWidget *parent = nullptr);
-    QLabel * welcomeLabel= new QLabel("Welcome");
-    QLabel * userNameLabel= new QLabel("Username");
-    QLabel * passwordLabel= new QLabel("Password");
-    QLineEdit * userNameLineEdit = new QLineEdit;
-    QLineEdit * passwordLineEdit = new QLineEdit;
-    QPushButton * signInPushButton = new QPushButton("Sign In");
-    QPushButton * signUpPushButton = new QPushButton("Sign Up");
-    QPushButton * guestPushButton = new QPushButton("Continue as Guest");
-    QGridLayout * gridLayout = new QGridLayout;
-    QVBoxLayout * verticalLayout = new QVBoxLayout;
+    QLabel * welcomeLabel;
+    QLabel * warningLabel;
+    QLabel * userNameLabel;
+    QLabel * passwordLabel;
+    QLineEdit * userNameLineEdit;
+    QLineEdit * passwordLineEdit;
+    QPushButton * signInPushButton;
+    QPushButton * signUpPushButton;
+    QPushButton * guestPushButton;
+    QGridLayout * gridLayout;
+    QVBoxLayout * verticalLayout;
 signals:
 
 };

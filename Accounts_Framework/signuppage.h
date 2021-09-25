@@ -4,8 +4,8 @@
 #include <QWidget>
 #include <QtWidgets>
 #include <QPixmap>
-#include<QJsonObject>
-#include<QFileDialog>
+#include <QJsonObject>
+#include <QFileDialog>
 #include <QImage>
 #include "Accounts_Framework/user.h"
 #include "Accounts_Framework/jsonutils.h"

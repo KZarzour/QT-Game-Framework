@@ -9,7 +9,6 @@ class JsonUtils
 public:
     JsonUtils();
 
-
     QString pathToJsonFile;
 
     void addUserToJson(QJsonObject user);

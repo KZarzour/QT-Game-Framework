@@ -9,6 +9,7 @@ LandingPage::LandingPage(QWidget *parent) : QWidget(parent)
     welcomeLabel->setAlignment(Qt::AlignCenter);
     QFont welcomeLabelFont("Arial", 20, QFont::Bold);
     welcomeLabel->setFont(welcomeLabelFont);
+    warningLabel= new QLabel();
     userNameLabel= new QLabel("Username: ");
     passwordLabel= new QLabel("Password: ");
     userNameLineEdit = new QLineEdit;
@@ -26,11 +27,12 @@ LandingPage::LandingPage(QWidget *parent) : QWidget(parent)
     gridLayout->addWidget(userNameLineEdit,0,1);
     gridLayout->addWidget(passwordLineEdit,1,1);
 
-    verticalLayout->addWidget(welcomeLabel,0);
-    verticalLayout->addLayout(gridLayout,1);
-    verticalLayout->addWidget(signInPushButton,2);
-    verticalLayout->addWidget(signUpPushButton,2);
-    verticalLayout->addWidget(guestPushButton,2);
+    verticalLayout->addWidget(welcomeLabel);
+    verticalLayout->addWidget(warningLabel);
+    verticalLayout->addLayout(gridLayout);
+    verticalLayout->addWidget(signInPushButton);
+    verticalLayout->addWidget(signUpPushButton);
+    verticalLayout->addWidget(guestPushButton);
 
     setLayout(verticalLayout);
 }

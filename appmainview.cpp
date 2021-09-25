@@ -21,8 +21,6 @@ void AppMainView::connectButtons(){
     QObject::connect(landingPage->signUpPushButton,SIGNAL(clicked(bool)),this,SLOT(signup()));
 
 
-
-
 }
 
 void AppMainView::signup(){
