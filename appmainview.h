@@ -6,6 +6,7 @@
 #include "Accounts_Framework/jsonutils.h"
 #include "Accounts_Framework/user.h"
 #include "Accounts_Framework/signuppage.h"
+#include "Accounts_Framework/mainpage.h"
 
 class AppMainView : public QGraphicsView
 {
@@ -15,6 +16,15 @@ public:
 
     JsonUtils *jsonUtils;
     SignupPage *signupPage;
+    mainPage *menuPage;
+
+    void connectButtons();
+
+public slots:
+    void signup();
+    void openMainPage();
+    void playAsGuest();
+
 };
 
 #endif // APPMAINVIEW_H

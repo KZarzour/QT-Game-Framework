@@ -1,24 +1,5 @@
 [
     {
-        "Address": {
-            "City": "London",
-            "Country": "Great Britain",
-            "Street": "Downing Street 10"
-        },
-        "Age": 43,
-        "FirstName": "John",
-        "LastName": "Doe",
-        "Phone numbers": [
-            "+44 1234567",
-            "+44 2345678"
-        ]
-    },
-    {
-        "Age": 431,
-        "FirstName": "SJohn",
-        "LastName": "DSoe"
-    },
-    {
         "Date of Birth": "17/10/2000",
         "First Name": "Maarouf",
         "Gender": "male",

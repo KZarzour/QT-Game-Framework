@@ -9,7 +9,8 @@ int main(int argc, char **argv){
 
     mainView -> setFixedSize(800, 800);
 //    mainView -> show();
-
+    mainView->setHorizontalScrollBarPolicy((Qt::ScrollBarAlwaysOff));
+    mainView->setVerticalScrollBarPolicy((Qt::ScrollBarAlwaysOff));
     return app.exec();
 
 }
