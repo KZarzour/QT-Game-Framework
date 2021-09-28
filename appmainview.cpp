@@ -19,6 +19,7 @@ void AppMainView::connectButtons(){
 
     QObject::connect(landingPage->guestPushButton,SIGNAL(clicked(bool)),this,SLOT(playAsGuest()));
     QObject::connect(landingPage->signUpPushButton,SIGNAL(clicked(bool)),this,SLOT(signup()));
+    QObject::connect(landingPage->signInPushButton,SIGNAL(clicked(bool)),this,SLOT(openMainPage()));
 
 }
 
@@ -40,6 +41,15 @@ void AppMainView::openMainPage(){
         this->show();
     }
     //implement here else statement when we come from login page
+    else if (landingPage->activeUser!=NULL){
+        landingPage->close();
+        menuPage->activeUser = signupPage->activeUser;
+        menuPage->welcomeL->setText(QString("Welcome, "+signupPage->activeUser->firstName+" "+signupPage->activeUser->lastName+"."));
+        menuPage->addProfilePicture();
+        menuPage->updateScores();
+        this->setScene(menuPage);
+        this->show();
+    }
 }
 void AppMainView::playAsGuest(){
     signupPage->hide();
@@ -55,3 +65,10 @@ void AppMainView::login(){
     landingPage->passwordLineEdit->clear();
     landingPage->show();
 }
+
+void AppMainView::authenticateUser(){
+    QString username =landingPage->userNameLineEdit->text();
+    QString password=landingPage->passwordLineEdit->text();
+    landingPage->activeUser=new User(jsonUtils->validateUser(username,password));
+    openMainPage();
+};

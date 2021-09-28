@@ -27,6 +27,7 @@ public slots:
     void openMainPage();
     void playAsGuest();
     void login();
+    void authenticateUser();
 
 };
 
