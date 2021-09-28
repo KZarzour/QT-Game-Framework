@@ -36,13 +36,6 @@ LandingPage::LandingPage(QWidget *parent) : QWidget(parent)
     verticalLayout->addWidget(guestPushButton);
 
     setLayout(verticalLayout);
-    //QObject::connect(signInPushButton,SIGNAL(clicked(bool)),this,SLOT(addUser()));
 
 }
 
-void LandingPage::authenticateUser(){
-    QString username =userNameLineEdit->text();
-    QString password=passwordLineEdit->text();
-    this->activeUser=new User(json.validateUser(username,password));
-
-};

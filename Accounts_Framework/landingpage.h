@@ -26,9 +26,8 @@ public:
     QPushButton * guestPushButton;
     QGridLayout * gridLayout;
     QVBoxLayout * verticalLayout;
-public slots:
-    void authenticateUser();
 
+public slots:
 };
 
 #endif // LANDINGPAGE_H

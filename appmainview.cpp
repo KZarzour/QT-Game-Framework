@@ -19,7 +19,7 @@ void AppMainView::connectButtons(){
 
     QObject::connect(landingPage->guestPushButton,SIGNAL(clicked(bool)),this,SLOT(playAsGuest()));
     QObject::connect(landingPage->signUpPushButton,SIGNAL(clicked(bool)),this,SLOT(signup()));
-    QObject::connect(landingPage->signInPushButton,SIGNAL(clicked(bool)),this,SLOT(openMainPage()));
+    QObject::connect(landingPage->signInPushButton,SIGNAL(clicked(bool)),this,SLOT(authenticateUser()));
 
 }
 
@@ -43,8 +43,8 @@ void AppMainView::openMainPage(){
     //implement here else statement when we come from login page
     else if (landingPage->activeUser!=NULL){
         landingPage->close();
-        menuPage->activeUser = signupPage->activeUser;
-        menuPage->welcomeL->setText(QString("Welcome, "+signupPage->activeUser->firstName+" "+signupPage->activeUser->lastName+"."));
+        menuPage->activeUser = landingPage->activeUser;
+        menuPage->welcomeL->setText(QString("Welcome, "+landingPage->activeUser->firstName+" "+landingPage->activeUser->lastName+"."));
         menuPage->addProfilePicture();
         menuPage->updateScores();
         this->setScene(menuPage);
@@ -70,5 +70,12 @@ void AppMainView::authenticateUser(){
     QString username =landingPage->userNameLineEdit->text();
     QString password=landingPage->passwordLineEdit->text();
     landingPage->activeUser=new User(jsonUtils->validateUser(username,password));
-    openMainPage();
+    if (landingPage->activeUser->isValid()){
+        openMainPage();
+    }
+    else {
+        landingPage->warningLabel->setStyleSheet("color : red");
+        landingPage->warningLabel->setText("Incorrect Username/Password pair");
+    }
+
 };
