@@ -13,13 +13,12 @@ AppMainView::AppMainView()
 
 void AppMainView::connectButtons(){
 
-
-    //QObject::connect(signupPage->signInB);
     QObject::connect(signupPage->signUpB,SIGNAL(clicked(bool)),this,SLOT(openMainPage()));
     QObject::connect(signupPage->playAsGuestB,SIGNAL(clicked(bool)),this,SLOT(playAsGuest()));
+    QObject::connect(signupPage->signInB,SIGNAL(clicked(bool)),this,SLOT(login()));
+
     QObject::connect(landingPage->guestPushButton,SIGNAL(clicked(bool)),this,SLOT(playAsGuest()));
     QObject::connect(landingPage->signUpPushButton,SIGNAL(clicked(bool)),this,SLOT(signup()));
-
 
 }
 
@@ -48,4 +47,11 @@ void AppMainView::playAsGuest(){
     menuPage->clearPage();
     this->setScene(menuPage);
     this->show();
+}
+void AppMainView::login(){
+    signupPage->close();
+    signupPage->clearPage();
+    landingPage->userNameLineEdit->clear();
+    landingPage->passwordLineEdit->clear();
+    landingPage->show();
 }
