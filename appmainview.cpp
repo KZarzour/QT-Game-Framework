@@ -21,6 +21,7 @@ void AppMainView::connectButtons(){
     QObject::connect(landingPage->signUpPushButton,SIGNAL(clicked(bool)),this,SLOT(signup()));
     QObject::connect(landingPage->signInPushButton,SIGNAL(clicked(bool)),this,SLOT(authenticateUser()));
 
+    QObject::connect(menuPage->homeB,SIGNAL(clicked(bool)),this,SLOT(logOut()));
 }
 
 void AppMainView::signup(){
@@ -63,6 +64,7 @@ void AppMainView::login(){
     signupPage->clearPage();
     landingPage->userNameLineEdit->clear();
     landingPage->passwordLineEdit->clear();
+    landingPage->warningLabel->clear();
     landingPage->show();
 }
 
@@ -77,5 +79,15 @@ void AppMainView::authenticateUser(){
         landingPage->warningLabel->setStyleSheet("color : red");
         landingPage->warningLabel->setText("Incorrect Username/Password pair");
     }
+}
 
-};
+void AppMainView::logOut(){
+    landingPage->activeUser=NULL;
+    signupPage->activeUser=NULL;
+
+    //add code to stop games and update scores
+
+    menuPage->clearPage();
+    this->hide();
+    this->login();
+}
