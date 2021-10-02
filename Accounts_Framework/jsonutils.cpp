@@ -2,7 +2,9 @@
 
 JsonUtils::JsonUtils()
 {
-    pathToJsonFile = "/home/eece435l/Documents/Project/qt-game-project/JSON/users.json";
+    //pathToJsonFile = "/home/eece435l/Documents/Project/qt-game-project/JSON/users.json";
+    pathToJsonFile = QDir().absoluteFilePath("../qt-game-project/JSON/users.json");
+    //qDebug()<<pathToJsonFile;
 }
 
 QJsonDocument JsonUtils:: getJsonDocument(){
