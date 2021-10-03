@@ -25,6 +25,7 @@ public:
     QGraphicsPixmapItem *game1Logo;
     QGraphicsPixmapItem *game2Logo;
     QGraphicsPixmapItem *userProfilePicture;
+    QGraphicsPixmapItem *flag;
 
     QPushButton *game1B;
     QPushButton *game2B;
@@ -40,6 +41,7 @@ public:
     void fillScene();
     void updateScores();
     void clearPage();
+    void setFlag();
 };
 
 #endif // MAINPAGE_H

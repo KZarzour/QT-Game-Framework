@@ -16,6 +16,7 @@ public:
 
     QJsonObject userToJson();
     QJsonArray scoresAsJsonArray(QVector<int> &scores);
+    QString findCorrespondingFlag();
 
     JsonUtils json;
 

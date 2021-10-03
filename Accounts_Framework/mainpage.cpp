@@ -13,6 +13,7 @@ mainPage::mainPage(QObject *parent) : QGraphicsScene(parent)
     game1Logo = new QGraphicsPixmapItem();
     game2Logo = new QGraphicsPixmapItem();
     userProfilePicture = new QGraphicsPixmapItem();
+    flag = new QGraphicsPixmapItem();
 
     game1Scores = new QLabel("");
     game2Scores = new QLabel("");
@@ -24,6 +25,7 @@ mainPage::mainPage(QObject *parent) : QGraphicsScene(parent)
     setupGameLogos();
     setupWidgetLocations();
     addProfilePicture();
+    setFlag();
     adjustLabelAppearance();
     fillScene();
 }
@@ -55,8 +57,44 @@ void mainPage::addProfilePicture(){
         userProfilePicture->setPixmap(pic.scaled(100,100));
         userProfilePicture->setPos(QPointF(400,65));
         this->addItem(userProfilePicture);
+        ////////////////////////////////
+
+        QString iso = activeUser->findCorrespondingFlag();
+        qDebug()<<iso;
+
+        QString path= ":/images/flags/"+iso+".png";
+        qDebug()<<path;
+        flag->setPixmap(QPixmap(path));
+        flag->setPos(QPointF(5,5));
+        this->addItem(flag);
+
+    }
+/*
+    if(activeUser){
+        QString iso = activeUser->findCorrespondingFlag();
+        qDebug()<<iso;
+        qDebug()<<":/images/flags/"+iso+".png";
+        flag->setPixmap(QPixmap(":/images/flags/"+iso+".png"));
+        flag->setPos(QPointF(30,30));
+        this->addItem(flag);
+    }
+*/
+}
+
+void mainPage::setFlag(){
+    qDebug()<<"setFlag Called";
+    if(activeUser){
+        qDebug()<<"inside if";
+        QString iso = activeUser->findCorrespondingFlag();
+        qDebug()<<iso;
+        qDebug()<<":/images/flags/"+iso+".png";
+        flag->setPixmap(QPixmap(":/images/flags/"+iso+".png"));
+        flag->setPos(QPointF(30,30));
+        this->addItem(flag);
+
     }
 }
+
 void mainPage::adjustLabelAppearance(){
     welcomeL->setWindowFlag(Qt::FramelessWindowHint);
     welcomeL->setAttribute(Qt::WA_NoSystemBackground);

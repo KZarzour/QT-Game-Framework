@@ -84,3 +84,31 @@ bool User::isValid(){
     }
     return true;
 }
+
+QString User::findCorrespondingFlag(){
+
+    QString phoneNumber=this->phonenumber;
+    //qDebug()<<phoneNumber;
+    int i =0;
+    while (phoneNumber.at(i)!='-'){
+        i++;
+        //qDebug()<<i;
+        //qDebug()<<phoneNumber.at(i);
+    }
+
+    QString code=phoneNumber.midRef(1,i-1).toString();
+    //qDebug()<<code;
+    QFile file(QDir().absoluteFilePath("../qt-game-project/JSON/Countries.json"));
+    file.open(QIODevice::ReadOnly | QIODevice::Text);
+    QByteArray val = file.readAll();
+    file.close();
+    QJsonDocument jsonDoc = QJsonDocument::fromJson(val);
+    QJsonArray countries = jsonDoc.array();
+    for(auto country : countries){
+        if(country.toObject().value("Code")==code){
+            return country.toObject().value("ISO").toString();
+        }
+    }
+    return "";
+
+}
