@@ -25,7 +25,6 @@ mainPage::mainPage(QObject *parent) : QGraphicsScene(parent)
     setupGameLogos();
     setupWidgetLocations();
     addProfilePicture();
-    setFlag();
     adjustLabelAppearance();
     fillScene();
 }
@@ -57,42 +56,17 @@ void mainPage::addProfilePicture(){
         userProfilePicture->setPixmap(pic.scaled(100,100));
         userProfilePicture->setPos(QPointF(400,65));
         this->addItem(userProfilePicture);
-        ////////////////////////////////
-
-        QString iso = activeUser->findCorrespondingFlag();
-        qDebug()<<iso;
-
-        QString path= ":/images/flags/"+iso+".png";
-        qDebug()<<path;
-        flag->setPixmap(QPixmap(path));
-        flag->setPos(QPointF(5,5));
-        this->addItem(flag);
+        setFlag();
 
     }
-/*
-    if(activeUser){
-        QString iso = activeUser->findCorrespondingFlag();
-        qDebug()<<iso;
-        qDebug()<<":/images/flags/"+iso+".png";
-        flag->setPixmap(QPixmap(":/images/flags/"+iso+".png"));
-        flag->setPos(QPointF(30,30));
-        this->addItem(flag);
-    }
-*/
 }
 
 void mainPage::setFlag(){
-    qDebug()<<"setFlag Called";
-    if(activeUser){
-        qDebug()<<"inside if";
-        QString iso = activeUser->findCorrespondingFlag();
-        qDebug()<<iso;
-        qDebug()<<":/images/flags/"+iso+".png";
-        flag->setPixmap(QPixmap(":/images/flags/"+iso+".png"));
-        flag->setPos(QPointF(30,30));
-        this->addItem(flag);
-
-    }
+    QString iso = activeUser->findCorrespondingFlag();
+    QString path= ":/images/flags/"+iso+".png";
+    flag->setPixmap(QPixmap(path));
+    flag->setPos(QPointF(180,40));
+    this->addItem(flag);
 }
 
 void mainPage::adjustLabelAppearance(){
@@ -120,7 +94,6 @@ void mainPage::fillScene(){
 
     this->addItem(game1Logo);
     this->addItem(game2Logo);
-    this->addItem(userProfilePicture);
 
     this->addWidget(game1B);
     this->addWidget(game2B);
