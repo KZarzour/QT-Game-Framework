@@ -6,6 +6,7 @@ AppMainView::AppMainView()
     signupPage = new SignupPage();
     menuPage = new mainPage();
     landingPage=new LandingPage();
+    game1View = new Game1View();
     landingPage->show();
 
     connectButtons();
@@ -22,6 +23,7 @@ void AppMainView::connectButtons(){
     QObject::connect(landingPage->signInPushButton,SIGNAL(clicked(bool)),this,SLOT(authenticateUser()));
 
     QObject::connect(menuPage->homeB,SIGNAL(clicked(bool)),this,SLOT(logOut()));
+    QObject::connect(menuPage->game1B,SIGNAL(clicked(bool)),this,SLOT(playGame1()));
 }
 
 void AppMainView::signup(){
@@ -90,4 +92,11 @@ void AppMainView::logOut(){
     menuPage->clearPage();
     this->hide();
     this->login();
+}
+
+void AppMainView::playGame1(){
+    game1View->activeUser = menuPage->activeUser;
+
+    this->hide();
+    game1View->show();
 }
