@@ -1,7 +1,52 @@
 [
-	{
-		"Q":"Which one of these words is written in Camel Case?",
-		"T": "camelCase",
-		"F": "CamelCase"
-	}
+  {
+    "Q": "Which one of these words is written in camel case?",
+    "T": "camelCase",
+    "F": "CAMELCASE"
+  },
+  {
+    "Q": "Which character is used to end a statement in C++/Java",
+    "T": ";",
+    "F": "."
+  },
+  {
+    "Q": "One Tab is equivalent to how many spaces",
+    "T": "4",
+    "F": "2"
+  },
+  {
+    "Q": "Which one of these words is written in camel case",
+    "T": "camelCase",
+    "F": "CAMELCASE"
+  },
+  {
+    "Q": "The command used to retreive code from the remote repository to the local one is:",
+    "T": "git pull",
+    "F": "git push"
+  },
+  {
+    "Q": "Files used to automate command line commands are called: ",
+    "T": "Makefiles",
+    "F": "Scource Files"
+  },
+  {
+    "Q": "One tool used to generate documentation from in code comments is",
+    "T": "doxygen",
+    "F": "docugen"
+  },
+  {
+    "Q": "To prepare changes before pushing from local to remote repo is: ",
+    "T": "git commit",
+    "F": "git merge"
+  },
+  {
+    "Q": "Source files in C++ have the extention:",
+    "T": ".cpp",
+    "F": ".o"
+  },
+  {
+    "Q": "The C++ command we use to compile is:",
+    "T": "g++",
+    "F": "c++"
+  }
 ]
