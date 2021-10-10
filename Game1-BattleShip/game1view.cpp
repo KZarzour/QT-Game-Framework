@@ -8,8 +8,12 @@ Game1View::Game1View()
     this->setHorizontalScrollBarPolicy((Qt::ScrollBarAlwaysOff));
     this->setVerticalScrollBarPolicy((Qt::ScrollBarAlwaysOff));
 
-    this->setScene(welcomePage);
-    this->show();
+    //this->setScene(welcomePage);
+    //this->show();
+    //this->hide();
+
+    QuestionPage *page = new QuestionPage();
+    page->show();
 
     connectButtons();
 }

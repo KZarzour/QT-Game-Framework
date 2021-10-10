@@ -7,6 +7,7 @@
 #include "../Accounts_Framework/user.h"
 #include "game1welcomepage.h"
 #include "questionobj.h"
+#include "questionpage.h"
 
 class Game1View : public QGraphicsView
 {
