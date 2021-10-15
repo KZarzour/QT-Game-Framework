@@ -259,5 +259,6 @@
         <file>images/boom.jpeg</file>
         <file>images/miss.jpeg</file>
         <file>images/target.png</file>
+        <file>images/ship.png</file>
     </qresource>
 </RCC>
