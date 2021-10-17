@@ -8,6 +8,7 @@
 #include "game1welcomepage.h"
 #include "questionobj.h"
 #include "questionpage.h"
+#include "commandpanel.h"
 
 class Game1View : public QGraphicsView
 {

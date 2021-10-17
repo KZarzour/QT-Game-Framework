@@ -11,7 +11,8 @@ Game1View::Game1View()
     //this->setScene(welcomePage);
     //this->show();
     //this->hide();
-
+    commandPanel *panel =new commandPanel();
+    panel->show();
     QuestionPage *page = new QuestionPage();
     page->show();
 
