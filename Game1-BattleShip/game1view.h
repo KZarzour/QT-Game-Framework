@@ -20,11 +20,16 @@ public:
 
     Game1WelcomePage *welcomePage;
 
+    QuestionPage *page;
+
     void keyPressEvent(QKeyEvent *event);
     void connectButtons();
+    void clearQuestionPage();
 
 public slots:
     void startGame();
+    void correctAnswer();
+    void wrongAnswer();
 };
 
 #endif // GAME1VIEW_H
