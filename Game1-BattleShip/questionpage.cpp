@@ -25,4 +25,6 @@ void QuestionPage:: generateQuestion(){
     questionL->setText(question->question);
     correctAnswerPB->setText(question->trueAnswer);
     wrongAnswerPB->setText(question->falseAnswer);
+    correctAnswerPB->setEnabled(true);
+    wrongAnswerPB->setEnabled(true);
 }

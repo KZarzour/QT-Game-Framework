@@ -4,11 +4,13 @@
 #include <QObject>
 #include <QWidget>
 #include <QGraphicsView>
+#include <numeric>
 #include "../Accounts_Framework/user.h"
 #include "game1welcomepage.h"
 #include "questionobj.h"
 #include "questionpage.h"
 #include "commandpanel.h"
+#include "../Accounts_Framework/jsonutils.h"
 
 class Game1View : public QGraphicsView
 {
@@ -22,9 +24,15 @@ public:
 
     QuestionPage *page;
 
+    QVector<bool> currentGameScores;
+
+    JsonUtils *jsonUtils;
+
     void keyPressEvent(QKeyEvent *event);
     void connectButtons();
     void clearQuestionPage();
+    void checkCurrGameScores();
+    void endCurrentGame(bool winOrLose);
 
 public slots:
     void startGame();
