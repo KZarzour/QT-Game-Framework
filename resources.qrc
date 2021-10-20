@@ -262,5 +262,7 @@
         <file>images/ship.png</file>
         <file>images/pannel-bg.jpg</file>
         <file>images/grid.png</file>
+        <file>images/big-boat.png</file>
+        <file>images/small-boat.png</file>
     </qresource>
 </RCC>
