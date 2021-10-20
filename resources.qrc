@@ -261,5 +261,6 @@
         <file>images/target.png</file>
         <file>images/ship.png</file>
         <file>images/pannel-bg.jpg</file>
+        <file>images/grid.png</file>
     </qresource>
 </RCC>

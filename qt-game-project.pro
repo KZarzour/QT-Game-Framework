@@ -31,3 +31,6 @@ HEADERS += \
 
 RESOURCES += \
     resources.qrc
+
+DISTFILES += \
+    images/grid.png
