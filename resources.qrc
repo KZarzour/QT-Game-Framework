@@ -260,5 +260,6 @@
         <file>images/miss.jpeg</file>
         <file>images/target.png</file>
         <file>images/ship.png</file>
+        <file>images/pannel-bg.jpg</file>
     </qresource>
 </RCC>

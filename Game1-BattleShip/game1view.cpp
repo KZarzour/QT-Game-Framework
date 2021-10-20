@@ -5,15 +5,16 @@ Game1View::Game1View()
     activeUser = new User();
     welcomePage = new Game1WelcomePage();
     jsonUtils = new JsonUtils();
+    gamePage =new Game1GamePage();
 
     this->setHorizontalScrollBarPolicy((Qt::ScrollBarAlwaysOff));
     this->setVerticalScrollBarPolicy((Qt::ScrollBarAlwaysOff));
 
-    this->setScene(welcomePage);
+    this->setScene(gamePage);
     //this->show();
     //this->hide();
-//    commandPanel *panel =new commandPanel();
-//    panel->show();
+    commandPanel *panel =new commandPanel();
+    panel->show();
     page = new QuestionPage();
     //page->show();
 

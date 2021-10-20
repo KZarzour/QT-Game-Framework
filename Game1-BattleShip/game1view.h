@@ -10,6 +10,7 @@
 #include "questionobj.h"
 #include "questionpage.h"
 #include "commandpanel.h"
+#include "game1gamepage.h"
 #include "../Accounts_Framework/jsonutils.h"
 
 class Game1View : public QGraphicsView
@@ -21,6 +22,7 @@ public:
     User *activeUser = NULL;
 
     Game1WelcomePage *welcomePage;
+    Game1GamePage *gamePage;
 
     QuestionPage *page;
 

@@ -7,6 +7,7 @@ SOURCES += \
     Accounts_Framework/signuppage.cpp \
     Accounts_Framework/user.cpp \
     Game1-BattleShip/commandpanel.cpp \
+    Game1-BattleShip/game1gamepage.cpp \
     Game1-BattleShip/game1view.cpp \
     Game1-BattleShip/game1welcomepage.cpp \
     Game1-BattleShip/questionobj.cpp \
@@ -21,6 +22,7 @@ HEADERS += \
     Accounts_Framework/signuppage.h \
     Accounts_Framework/user.h \
     Game1-BattleShip/commandpanel.h \
+    Game1-BattleShip/game1gamepage.h \
     Game1-BattleShip/game1view.h \
     Game1-BattleShip/game1welcomepage.h \
     Game1-BattleShip/questionobj.h \
