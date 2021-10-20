@@ -5,6 +5,7 @@
 #include <QWidget>
 #include <QGraphicsScene>
 #include <QGraphicsPixmapItem>
+#include <QLabel>
 #include "commandpanel.h"
 
 class Game1GamePage : public QGraphicsScene
@@ -15,10 +16,13 @@ public:
     QGraphicsPixmapItem *player1Grid;
     QGraphicsPixmapItem *player2Grid;
     commandPanel *playerCommandPanel;
+    QLabel *GCPLabel;
+    QLabel *BCPLabel;
 
     void setupScene();
     void setupGrids();
     void fillScene();
+    void setupWidgets();
 };
 
 #endif // GAME1GAMEPAGE_H
