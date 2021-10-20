@@ -20,10 +20,10 @@ void Game1GamePage::setupScene(){
 void Game1GamePage::setupGrids()
 {
     player1Grid->setPixmap((QPixmap(":/images/grid.png")).scaled(300,300));
-    player1Grid->setPos(QPointF(30,250));
+    player1Grid->setPos(QPointF(100,250));
 
     player2Grid->setPixmap((QPixmap(":/images/grid.png")).scaled(300,300));
-    player2Grid->setPos(QPointF(260,250));
+    player2Grid->setPos(QPointF(600,250));
 
 }
 
