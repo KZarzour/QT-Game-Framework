@@ -116,6 +116,8 @@ Game1GamePage::Game1GamePage()
     v2.clear();
     qDebug()<<enemyBoatPositions;
 
+    lastBoxChosen="";
+
     setupScene();
     setupWidgets();
     setupBoats();
@@ -191,6 +193,23 @@ void Game1GamePage::setupButtons(){
     button31->setGeometry(686,471,62,62);
     button32->setGeometry(753,471,62,62);
     button33->setGeometry(821,471,62,62);
+
+    button00->setEnabled(false);
+    button01->setEnabled(false);
+    button02->setEnabled(false);
+    button03->setEnabled(false);
+    button10->setEnabled(false);
+    button11->setEnabled(false);
+    button12->setEnabled(false);
+    button13->setEnabled(false);
+    button20->setEnabled(false);
+    button21->setEnabled(false);
+    button22->setEnabled(false);
+    button23->setEnabled(false);
+    button30->setEnabled(false);
+    button31->setEnabled(false);
+    button32->setEnabled(false);
+    button33->setEnabled(false);
 }
 
 void Game1GamePage::fillScene()
@@ -211,7 +230,7 @@ void Game1GamePage::fillScene()
     this->addItem(player1Grid);
     this->addItem(player2Grid);
 
-    /*this->addWidget(button00);
+    this->addWidget(button00);
     this->addWidget(button01);
     this->addWidget(button02);
     this->addWidget(button03);
@@ -226,5 +245,28 @@ void Game1GamePage::fillScene()
     this->addWidget(button30);
     this->addWidget(button31);
     this->addWidget(button32);
-    this->addWidget(button33);*/
+    this->addWidget(button33);
+}
+
+QVector<int> Game1GamePage::getButtonPosition(QPushButton *button){
+    QVector<int> pos;
+    for (int i=0;i<gridButtons.size();i++) {
+        for (int j=0;j<gridButtons.at(0).size();j++) {
+            if(button == gridButtons.at(i).at(j)){
+                pos.push_back(i);
+                pos.push_back(j);
+                qDebug()<<pos;
+                return pos;
+            }
+        }
+    }
+    pos.push_back(-1);
+    return pos;
+}
+
+bool Game1GamePage::discoverBlock(int x ,int y){
+    if(enemyBoatPositions.at(x).at(y)){
+        return true;
+    }
+    return false;
 }

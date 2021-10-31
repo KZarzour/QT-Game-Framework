@@ -32,16 +32,21 @@ public:
 
     commandPanel *panel;
 
+
     void keyPressEvent(QKeyEvent *event);
     void connectButtons();
     void clearQuestionPage();
     void checkCurrGameScores();
     void endCurrentGame(bool winOrLose);
+    void revealBox(int x , int y);
+    void strikeBox(int x, int y);
+
 
 public slots:
     void startGame();
     void correctAnswer();
     void wrongAnswer();
+    void attack();
 };
 
 #endif // GAME1VIEW_H

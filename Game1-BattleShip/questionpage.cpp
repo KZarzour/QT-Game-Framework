@@ -27,4 +27,5 @@ void QuestionPage:: generateQuestion(){
     wrongAnswerPB->setText(question->falseAnswer);
     correctAnswerPB->setEnabled(true);
     wrongAnswerPB->setEnabled(true);
+    this->setStyleSheet("background-color: white;");
 }

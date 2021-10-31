@@ -2,7 +2,7 @@
 
 commandPanel::commandPanel(QWidget *parent) : QWidget(parent)
 {
-    mainLabel=new QLabel("Enter Target to hit ex: A1, B2 etc.");
+    mainLabel=new QLabel("Enter Target to hit ex: 00 for 1st row 1st column, 12 for 2nd row third column etc.");
 
     confirmPB = new QPushButton("Confirm Target");
     targetLineEdit = new QLineEdit;

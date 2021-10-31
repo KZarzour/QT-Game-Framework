@@ -50,12 +50,16 @@ public:
     QVector<QVector<bool>> userBoatPositions;
     QVector<QVector<bool>> enemyBoatPositions;
 
+    QString lastBoxChosen;
+
     void setupScene();
     void setupGrids();
     void fillScene();
     void setupBoats();
     void setupWidgets();
     void setupButtons();
+    QVector<int> getButtonPosition(QPushButton* button);
+    bool discoverBlock(int x, int y);
 };
 
 #endif // GAME1GAMEPAGE_H
