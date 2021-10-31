@@ -15,6 +15,9 @@ Game1GamePage::Game1GamePage()
     player2Boat1 = new QGraphicsPixmapItem();
     player2Boat2 = new QGraphicsPixmapItem();
     player2Boat3 = new QGraphicsPixmapItem();
+    player2Boat4 = new QGraphicsPixmapItem();
+    player2Boat5 = new QGraphicsPixmapItem();
+    player2Boat6 = new QGraphicsPixmapItem();
 
     button00 = new QPushButton();
     button01 = new QPushButton();
@@ -61,6 +64,24 @@ void Game1GamePage::setupBoats()
 {
     player1Boat1->setPixmap((QPixmap(":/images/big-boat.png")).scaled(200,50));
     player1Boat1->setPos(QPointF(115,270));
+    player1Boat2->setPixmap((QPixmap(":/images/small-boat.png")).scaled(60,60));
+    player1Boat2->setPos(QPointF(115,405));
+    player1Boat3->setPixmap((QPixmap(":/images/small-boat.png")).scaled(60,60));
+    player1Boat3->setPos(QPointF(318,473));
+
+    player2Boat1->setPixmap((QPixmap(":/images/big-boat.png")).scaled(200,50));
+    player2Boat1->setPos(QPointF(618,338));
+    player2Boat2->setPixmap((QPixmap(":/images/big-boat.png")).scaled(200,50));
+    player2Boat2->setPos(QPointF(686,471));
+    player2Boat3->setPixmap((QPixmap(":/images/small-boat.png")).scaled(60,60));
+    player2Boat3->setPos(QPointF(821,268));
+    player2Boat4->setPixmap((QPixmap(":/images/small-boat.png")).scaled(60,60));
+    player2Boat4->setPos(QPointF(618,268));
+    player2Boat5->setPixmap((QPixmap(":/images/small-boat.png")).scaled(60,60));
+    player2Boat5->setPos(QPointF(618,403));
+    player2Boat6->setPixmap((QPixmap(":/images/small-boat.png")).scaled(60,60));
+    player2Boat6->setPos(QPointF(686,268));
+
 }
 
 void Game1GamePage::setupGrids()
@@ -103,11 +124,14 @@ void Game1GamePage::fillScene()
     this->addItem(player2Boat1);
     this->addItem(player2Boat2);
     this->addItem(player2Boat3);
+    this->addItem(player2Boat4);
+    this->addItem(player2Boat5);
+    this->addItem(player2Boat6);
 
     this->addItem(player1Grid);
     this->addItem(player2Grid);
 
-    this->addWidget(button00);
+    /*this->addWidget(button00);
     this->addWidget(button01);
     this->addWidget(button02);
     this->addWidget(button03);
@@ -122,5 +146,5 @@ void Game1GamePage::fillScene()
     this->addWidget(button30);
     this->addWidget(button31);
     this->addWidget(button32);
-    this->addWidget(button33);
+    this->addWidget(button33);*/
 }

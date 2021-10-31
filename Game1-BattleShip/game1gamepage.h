@@ -22,6 +22,9 @@ public:
     QGraphicsPixmapItem *player2Boat1;
     QGraphicsPixmapItem *player2Boat2;
     QGraphicsPixmapItem *player2Boat3;
+    QGraphicsPixmapItem *player2Boat4;
+    QGraphicsPixmapItem *player2Boat5;
+    QGraphicsPixmapItem *player2Boat6;
     commandPanel *playerCommandPanel;
     QLabel *GCPLabel;
     QLabel *BCPLabel;
