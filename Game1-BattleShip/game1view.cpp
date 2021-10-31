@@ -6,16 +6,16 @@ Game1View::Game1View()
     welcomePage = new Game1WelcomePage();
     jsonUtils = new JsonUtils();
     gamePage =new Game1GamePage();
+    panel =new commandPanel();
+    page = new QuestionPage();
 
     this->setHorizontalScrollBarPolicy((Qt::ScrollBarAlwaysOff));
     this->setVerticalScrollBarPolicy((Qt::ScrollBarAlwaysOff));
 
-    this->setScene(gamePage);
+    this->setScene(welcomePage);
     //this->show();
     //this->hide();
-    commandPanel *panel =new commandPanel();
-    panel->show();
-    page = new QuestionPage();
+    //panel->show();
     //page->show();
 
     connectButtons();
@@ -38,8 +38,10 @@ void Game1View::connectButtons(){
 }
 
 void Game1View::startGame(){
-    qDebug()<<"hello";
-    page->show();
+    //qDebug()<<"hello";
+    this->setScene(gamePage);
+    panel->show();
+    //page->show();
 }
 
 void Game1View::correctAnswer(){

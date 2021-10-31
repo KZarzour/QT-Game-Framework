@@ -30,6 +30,8 @@ public:
 
     JsonUtils *jsonUtils;
 
+    commandPanel *panel;
+
     void keyPressEvent(QKeyEvent *event);
     void connectButtons();
     void clearQuestionPage();

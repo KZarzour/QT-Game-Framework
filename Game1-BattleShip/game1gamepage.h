@@ -7,6 +7,7 @@
 #include <QGraphicsPixmapItem>
 #include <QLabel>
 #include "commandpanel.h"
+#include <QtWidgets>
 
 class Game1GamePage : public QGraphicsScene
 {
@@ -25,11 +26,29 @@ public:
     QLabel *GCPLabel;
     QLabel *BCPLabel;
 
+    QPushButton *button00;
+    QPushButton *button01;
+    QPushButton *button02;
+    QPushButton *button03;
+    QPushButton *button10;
+    QPushButton *button11;
+    QPushButton *button12;
+    QPushButton *button13;
+    QPushButton *button20;
+    QPushButton *button21;
+    QPushButton *button22;
+    QPushButton *button23;
+    QPushButton *button30;
+    QPushButton *button31;
+    QPushButton *button32;
+    QPushButton *button33;
+
     void setupScene();
     void setupGrids();
     void fillScene();
     void setupBoats();
     void setupWidgets();
+    void setupButtons();
 };
 
 #endif // GAME1GAMEPAGE_H
