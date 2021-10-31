@@ -46,6 +46,10 @@ public:
     QPushButton *button32;
     QPushButton *button33;
 
+    QVector<QVector<QPushButton *>> gridButtons;
+    QVector<QVector<bool>> userBoatPositions;
+    QVector<QVector<bool>> enemyBoatPositions;
+
     void setupScene();
     void setupGrids();
     void fillScene();
