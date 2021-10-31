@@ -7,6 +7,8 @@ Game1GamePage::Game1GamePage()
     playerCommandPanel = new commandPanel();
     GCPLabel = new QLabel("Good Coding Practices");
     BCPLabel = new QLabel("Bad Coding Practices");
+    gameStatus = new QLabel();
+
 
     player1Boat1 = new QGraphicsPixmapItem();
     player1Boat2 = new QGraphicsPixmapItem();
@@ -35,6 +37,8 @@ Game1GamePage::Game1GamePage()
     button31 = new QPushButton();
     button32 = new QPushButton();
     button33 = new QPushButton();
+
+    home = new QPushButton("Home");
 
     QVector<QPushButton*> v1;
     v1.push_back(button00);
@@ -124,6 +128,7 @@ Game1GamePage::Game1GamePage()
     setupGrids();
     setupButtons();
     fillScene();
+
 }
 
 void Game1GamePage::setupScene(){
@@ -140,6 +145,11 @@ void Game1GamePage::setupWidgets(){
     BCPLabel->setGeometry(550,200,500,80);
     BCPLabel->setAttribute(Qt::WA_NoSystemBackground);
     BCPLabel->setStyleSheet("QLabel { font-size: 32px; font-weight: bold; color: white}");
+
+    gameStatus->setGeometry(468,600,80,50);
+    gameStatus->setAttribute(Qt::WA_NoSystemBackground);
+    gameStatus->setStyleSheet("QLabel { font-size: 32px; font-weight: bold; color: white}");
+    gameStatus->hide();
 }
 
 void Game1GamePage::setupBoats()
@@ -210,12 +220,15 @@ void Game1GamePage::setupButtons(){
     button31->setEnabled(false);
     button32->setEnabled(false);
     button33->setEnabled(false);
+
+    home->setGeometry(468,700,80,50);
 }
 
 void Game1GamePage::fillScene()
 {
     this->addWidget(GCPLabel);
     this->addWidget(BCPLabel);
+    this->addWidget(gameStatus);
 
     this->addItem(player1Boat1);
     this->addItem(player1Boat2);
@@ -246,6 +259,8 @@ void Game1GamePage::fillScene()
     this->addWidget(button31);
     this->addWidget(button32);
     this->addWidget(button33);
+
+    this->addWidget(home);
 }
 
 QVector<int> Game1GamePage::getButtonPosition(QPushButton *button){

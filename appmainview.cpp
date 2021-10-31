@@ -97,6 +97,8 @@ void AppMainView::logOut(){
 void AppMainView::playGame1(){
     game1View->activeUser = menuPage->activeUser;
 
+    game1View->appMainView = this;
+
     this->hide();
     game1View->show();
 }

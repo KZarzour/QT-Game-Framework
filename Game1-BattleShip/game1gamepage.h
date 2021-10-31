@@ -29,6 +29,8 @@ public:
     QLabel *GCPLabel;
     QLabel *BCPLabel;
 
+    QLabel *gameStatus;
+
     QPushButton *button00;
     QPushButton *button01;
     QPushButton *button02;
@@ -51,6 +53,10 @@ public:
     QVector<QVector<bool>> enemyBoatPositions;
 
     QString lastBoxChosen;
+
+    QPushButton *home;
+
+    bool endGame = false;
 
     void setupScene();
     void setupGrids();

@@ -32,6 +32,7 @@ public:
 
     commandPanel *panel;
 
+    QGraphicsView *appMainView;
 
     void keyPressEvent(QKeyEvent *event);
     void connectButtons();
@@ -47,6 +48,7 @@ public slots:
     void correctAnswer();
     void wrongAnswer();
     void attack();
+    void goToHome();
 };
 
 #endif // GAME1VIEW_H

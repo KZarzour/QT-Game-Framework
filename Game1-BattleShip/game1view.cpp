@@ -35,6 +35,8 @@ void Game1View::connectButtons(){
     QObject::connect(page->wrongAnswerPB,SIGNAL(clicked(bool)),this,SLOT(wrongAnswer()));
 
     QObject::connect(panel->confirmPB,SIGNAL(clicked(bool)),this,SLOT(attack()));
+
+    QObject::connect(gamePage->home,SIGNAL(clicked(bool)),this,SLOT(goToHome()));
 }
 
 void Game1View::startGame(){
@@ -108,17 +110,35 @@ void Game1View::endCurrentGame(bool winOrLose){
         if(winOrLose){
             activeUser->game1Scores.push_back(1);
             activeUser->game1HighScore++;
+            gamePage->gameStatus->setText("YOU WON!");
+            gamePage->gameStatus->setStyleSheet("QLabel { color: green}");
+            gamePage->gameStatus->show();
         }
         else{
             activeUser->game1Scores.push_back(0);
+            gamePage->gameStatus->setText("YOU LOST!");
+            gamePage->gameStatus->setStyleSheet("QLabel { color: red}");
+            gamePage->gameStatus->show();
         }
         jsonUtils->updateScores(activeUser->username,activeUser->game1Scores,activeUser->game1HighScore,0);
     }
-
+    else{
+       if(winOrLose){
+           gamePage->gameStatus->setText("YOU WON!");
+           gamePage->gameStatus->setStyleSheet("QLabel { color: green}");
+           gamePage->gameStatus->show();
+       }
+       else{
+           gamePage->gameStatus->setText("YOU LOST!");
+           gamePage->gameStatus->setStyleSheet("QLabel { color: red}");
+           gamePage->gameStatus->show();
+       }
+    }
     clearQuestionPage();
     currentGameScores.clear();
-    this->setScene(welcomePage);
-    this->show();
+    gamePage->endGame=true;
+//    this->setScene(welcomePage);
+//    this->show();
 }
 
 void Game1View::attack(){
@@ -157,4 +177,15 @@ void Game1View::revealBox(int x, int y){
 
 void Game1View::strikeBox(int x, int y){
     gamePage->gridButtons.at(x).at(y)->setStyleSheet("background-color: red");
+}
+
+void Game1View::goToHome(){
+    this->hide();
+    panel->hide();
+    if(gamePage->endGame){
+        //add here
+
+        gamePage->endGame=false;
+    }
+    appMainView->show();
 }
