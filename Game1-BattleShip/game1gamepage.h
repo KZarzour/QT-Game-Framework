@@ -9,6 +9,7 @@
 #include "commandpanel.h"
 #include <QtWidgets>
 
+
 class Game1GamePage : public QGraphicsScene
 {
     Q_OBJECT
@@ -28,7 +29,8 @@ public:
     commandPanel *playerCommandPanel;
     QLabel *GCPLabel;
     QLabel *BCPLabel;
-
+    QLabel *correctAnswerNo;
+    QLabel *incorrectAnswerNo;
     QLabel *gameStatus;
 
     QPushButton *button00;

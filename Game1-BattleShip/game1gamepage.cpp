@@ -7,6 +7,8 @@ Game1GamePage::Game1GamePage()
     playerCommandPanel = new commandPanel();
     GCPLabel = new QLabel("Good Coding Practices");
     BCPLabel = new QLabel("Bad Coding Practices");
+    correctAnswerNo = new QLabel("Number of correct answers: 0");
+    incorrectAnswerNo = new QLabel("Number of incorrect answers: 0");
     gameStatus = new QLabel();
 
 
@@ -146,6 +148,14 @@ void Game1GamePage::setupWidgets(){
     BCPLabel->setAttribute(Qt::WA_NoSystemBackground);
     BCPLabel->setStyleSheet("QLabel { font-size: 32px; font-weight: bold; color: white}");
 
+    correctAnswerNo->setGeometry(550,520,500,80);
+    correctAnswerNo->setAttribute(Qt::WA_NoSystemBackground);
+    correctAnswerNo->setStyleSheet("QLabel { font-size: 20px; font-weight: bold; color: white}");
+
+    incorrectAnswerNo->setGeometry(550,540,500,80);
+    incorrectAnswerNo->setAttribute(Qt::WA_NoSystemBackground);
+    incorrectAnswerNo->setStyleSheet("QLabel { font-size: 20px; font-weight: bold; color: white}");
+
     gameStatus->setGeometry(468,600,80,50);
     gameStatus->setAttribute(Qt::WA_NoSystemBackground);
     gameStatus->setStyleSheet("QLabel { font-size: 32px; font-weight: bold; color: white}");
@@ -228,6 +238,8 @@ void Game1GamePage::fillScene()
 {
     this->addWidget(GCPLabel);
     this->addWidget(BCPLabel);
+    this->addWidget(correctAnswerNo);
+    this->addWidget(incorrectAnswerNo);
     this->addWidget(gameStatus);
 
     this->addItem(player1Boat1);

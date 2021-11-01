@@ -96,6 +96,9 @@ void Game1View::checkCurrGameScores(){
         }
     }
 
+    gamePage->correctAnswerNo->setText(tr("Number of correct answers: %1").arg(numTrue));
+    gamePage->incorrectAnswerNo->setText(tr("Number of incorrect answers: %1").arg(numFalse));
+
     if(numFalse==4){
         //qDebug()<<"Lost Game";
         endCurrentGame(false);
@@ -185,6 +188,18 @@ void Game1View::goToHome(){
     if(gamePage->endGame){
         //add here
 
+        //Show all buttons
+        for (int i=0; i<=3;i++) {
+            for (int j=0; j<=3;j++) {
+                gamePage->gridButtons.at(i).at(j)->show();
+            }
+        }
+
+        gamePage->setupScene();
+        gamePage->setupWidgets();
+        //gamePage->setupBoats();
+        //gamePage->setupGrids();
+        //gamePage->setupButtons();
         gamePage->endGame=false;
     }
     appMainView->show();

@@ -12,6 +12,7 @@
 #include "commandpanel.h"
 #include "game1gamepage.h"
 #include "../Accounts_Framework/jsonutils.h"
+#include <string>
 
 class Game1View : public QGraphicsView
 {
