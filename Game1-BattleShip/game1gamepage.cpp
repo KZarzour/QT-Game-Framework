@@ -40,11 +40,11 @@ Game1GamePage::Game1GamePage()
     button32 = new QPushButton();
     button33 = new QPushButton();
 
-    boat1Part1Label = new QLabel("TEST");
-    boat1Part2Label = new QLabel("TEST");
-    boat1Part3Label = new QLabel("TEST");
-    boat2Label = new QLabel("TEST");
-    boat3Label = new QLabel("TEST");
+    boat1Part1Label = new QLabel();
+    boat1Part2Label = new QLabel();
+    boat1Part3Label = new QLabel();
+    boat2Label = new QLabel();
+    boat3Label = new QLabel();
 
     badAnswers=0;
 
@@ -245,11 +245,19 @@ void Game1GamePage::setupButtons(){
 
 void Game1GamePage::setupLabels(){
     boat1Part1Label->setGeometry(118,268,62,62);
-    boat1Part2Label->setGeometry(186,268,62,62);
-    boat1Part3Label->setGeometry(253,268,62,62);
-    boat2Label->setGeometry(118,403,62,62);
-    boat3Label->setGeometry(321,471,62,62);
+    boat1Part1Label->setStyleSheet("background-color: transparent;");
 
+    boat1Part2Label->setGeometry(186,268,62,62);
+    boat1Part2Label->setStyleSheet("background-color: transparent;");
+
+    boat1Part3Label->setGeometry(253,268,62,62);
+    boat1Part3Label->setStyleSheet("background-color: transparent;");
+
+    boat2Label->setGeometry(118,403,62,62);
+    boat2Label->setStyleSheet("background-color: transparent;");
+
+    boat3Label->setGeometry(321,471,62,62);
+    boat3Label->setStyleSheet("background-color: transparent;");
 }
 
 void Game1GamePage::fillScene()
