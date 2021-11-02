@@ -40,6 +40,12 @@ Game1GamePage::Game1GamePage()
     button32 = new QPushButton();
     button33 = new QPushButton();
 
+    boat1Part1Label = new QLabel("TEST");
+    boat1Part2Label = new QLabel("TEST");
+    boat1Part3Label = new QLabel("TEST");
+    boat2Label = new QLabel("TEST");
+    boat3Label = new QLabel("TEST");
+
     home = new QPushButton("Home");
 
     QVector<QPushButton*> v1;
@@ -129,6 +135,7 @@ Game1GamePage::Game1GamePage()
     setupBoats();
     setupGrids();
     setupButtons();
+    setupLabels();
     fillScene();
 
 }
@@ -234,6 +241,15 @@ void Game1GamePage::setupButtons(){
     home->setGeometry(468,700,80,50);
 }
 
+void Game1GamePage::setupLabels(){
+    boat1Part1Label->setGeometry(118,268,62,62);
+    boat1Part2Label->setGeometry(186,268,62,62);
+    boat1Part3Label->setGeometry(253,268,62,62);
+    boat2Label->setGeometry(118,403,62,62);
+    boat3Label->setGeometry(321,471,62,62);
+
+}
+
 void Game1GamePage::fillScene()
 {
     this->addWidget(GCPLabel);
@@ -271,6 +287,13 @@ void Game1GamePage::fillScene()
     this->addWidget(button31);
     this->addWidget(button32);
     this->addWidget(button33);
+
+    this->addWidget(boat1Part1Label);
+    this->addWidget(boat1Part2Label);
+    this->addWidget(boat1Part3Label);
+    this->addWidget(boat2Label);
+    this->addWidget(boat3Label);
+
 
     this->addWidget(home);
 }

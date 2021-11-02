@@ -180,6 +180,7 @@ void Game1View::revealBox(int x, int y){
 
 void Game1View::strikeBox(int x, int y){
     gamePage->gridButtons.at(x).at(y)->setStyleSheet("background-color: red");
+    gamePage->boat3Label->setStyleSheet("background-color: red");
 }
 
 void Game1View::goToHome(){
@@ -194,6 +195,7 @@ void Game1View::goToHome(){
                 gamePage->gridButtons.at(i).at(j)->show();
             }
         }
+        
 
         gamePage->setupScene();
         gamePage->setupWidgets();
@@ -201,6 +203,7 @@ void Game1View::goToHome(){
         //gamePage->setupGrids();
         //gamePage->setupButtons();
         gamePage->endGame=false;
+       
     }
     appMainView->show();
 }

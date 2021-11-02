@@ -50,6 +50,13 @@ public:
     QPushButton *button32;
     QPushButton *button33;
 
+    QLabel *boat1Part1Label;
+    QLabel *boat1Part2Label;
+    QLabel *boat1Part3Label;
+    QLabel *boat2Label;
+    QLabel *boat3Label;
+
+
     QVector<QVector<QPushButton *>> gridButtons;
     QVector<QVector<bool>> userBoatPositions;
     QVector<QVector<bool>> enemyBoatPositions;
@@ -65,6 +72,7 @@ public:
     void fillScene();
     void setupBoats();
     void setupWidgets();
+    void setupLabels();
     void setupButtons();
     QVector<int> getButtonPosition(QPushButton* button);
     bool discoverBlock(int x, int y);
