@@ -48,6 +48,7 @@ public slots:
     void startGame();
     void correctAnswer();
     void wrongAnswer();
+    void hitHome();
     void attack();
     void goToHome();
 };

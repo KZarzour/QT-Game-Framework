@@ -46,6 +46,8 @@ Game1GamePage::Game1GamePage()
     boat2Label = new QLabel("TEST");
     boat3Label = new QLabel("TEST");
 
+    badAnswers=0;
+
     home = new QPushButton("Home");
 
     QVector<QPushButton*> v1;

@@ -71,6 +71,26 @@ void Game1View::wrongAnswer(){
     int y = i%10;
     int x = (i/10) % 10;
     strikeBox(x,y);
+    hitHome();
+}
+
+void Game1View::hitHome(){
+    gamePage->badAnswers=gamePage->badAnswers+1;
+    if (gamePage->badAnswers==1){
+        gamePage->boat1Part1Label->setStyleSheet("background-color: red");
+    }
+    if (gamePage->badAnswers==2){
+        gamePage->boat1Part2Label->setStyleSheet("background-color: red");
+    }
+    if (gamePage->badAnswers==3){
+        gamePage->boat1Part3Label->setStyleSheet("background-color: red");
+    }
+    if (gamePage->badAnswers==4){
+        gamePage->boat2Label->setStyleSheet("background-color: red");
+    }
+    if (gamePage->badAnswers==5){
+        gamePage->boat3Label->setStyleSheet("background-color: red");
+    }
 }
 
 void Game1View::clearQuestionPage(){
@@ -180,7 +200,7 @@ void Game1View::revealBox(int x, int y){
 
 void Game1View::strikeBox(int x, int y){
     gamePage->gridButtons.at(x).at(y)->setStyleSheet("background-color: red");
-    gamePage->boat3Label->setStyleSheet("background-color: red");
+    //gamePage->boat3Label->setStyleSheet("background-color: red");
 }
 
 void Game1View::goToHome(){

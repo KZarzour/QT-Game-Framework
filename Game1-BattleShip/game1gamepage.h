@@ -55,6 +55,7 @@ public:
     QLabel *boat1Part3Label;
     QLabel *boat2Label;
     QLabel *boat3Label;
+    int badAnswers;
 
 
     QVector<QVector<QPushButton *>> gridButtons;
