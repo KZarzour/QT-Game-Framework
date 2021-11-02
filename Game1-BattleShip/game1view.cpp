@@ -213,15 +213,22 @@ void Game1View::goToHome(){
         for (int i=0; i<=3;i++) {
             for (int j=0; j<=3;j++) {
                 gamePage->gridButtons.at(i).at(j)->show();
+                gamePage->gridButtons.at(i).at(j)->setStyleSheet("background-color: white");
             }
         }
         
+        //Reset player side changes
+        gamePage->badAnswers=0;
+        gamePage->boat1Part1Label->setStyleSheet("background-color: transparent;");
+        gamePage->boat1Part2Label->setStyleSheet("background-color: transparent;");
+        gamePage->boat1Part3Label->setStyleSheet("background-color: transparent;");
+        gamePage->boat2Label->setStyleSheet("background-color: transparent;");
+        gamePage->boat3Label->setStyleSheet("background-color: transparent;");
 
-        gamePage->setupScene();
-        gamePage->setupWidgets();
-        //gamePage->setupBoats();
-        //gamePage->setupGrids();
-        //gamePage->setupButtons();
+        //Reset score counters
+        gamePage->correctAnswerNo->setText("Number of correct answers: 0");
+        gamePage->incorrectAnswerNo->setText("Number of incorrect answers: 0");
+
         gamePage->endGame=false;
        
     }
