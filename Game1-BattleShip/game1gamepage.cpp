@@ -47,7 +47,6 @@ Game1GamePage::Game1GamePage()
     boat3Label = new QLabel();
 
     badAnswers=0;
-
     home = new QPushButton("Home");
 
     QVector<QPushButton*> v1;
@@ -303,7 +302,6 @@ void Game1GamePage::fillScene()
     this->addWidget(boat1Part3Label);
     this->addWidget(boat2Label);
     this->addWidget(boat3Label);
-
 
     this->addWidget(home);
 }

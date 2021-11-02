@@ -160,6 +160,7 @@ void Game1View::endCurrentGame(bool winOrLose){
     clearQuestionPage();
     currentGameScores.clear();
     gamePage->endGame=true;
+    //gamePage->startGame->show();
 //    this->setScene(welcomePage);
 //    this->show();
 }
@@ -204,6 +205,8 @@ void Game1View::strikeBox(int x, int y){
 }
 
 void Game1View::goToHome(){
+    this->setScene(welcomePage);
+    panel->targetLineEdit->clear();
     this->hide();
     panel->hide();
     if(gamePage->endGame){
@@ -228,6 +231,10 @@ void Game1View::goToHome(){
         //Reset score counters
         gamePage->correctAnswerNo->setText("Number of correct answers: 0");
         gamePage->incorrectAnswerNo->setText("Number of incorrect answers: 0");
+
+        gamePage->gameStatus->hide();
+
+        page->hide();
 
         gamePage->endGame=false;
        
