@@ -12,6 +12,7 @@ SOURCES += \
     Game1-BattleShip/game1welcomepage.cpp \
     Game1-BattleShip/questionobj.cpp \
     Game1-BattleShip/questionpage.cpp \
+    Game2-ShootingDiscs/game2view.cpp \
     appmainview.cpp \
     main.cpp
 
@@ -27,6 +28,7 @@ HEADERS += \
     Game1-BattleShip/game1welcomepage.h \
     Game1-BattleShip/questionobj.h \
     Game1-BattleShip/questionpage.h \
+    Game2-ShootingDiscs/game2view.h \
     appmainview.h
 
 RESOURCES += \

@@ -9,6 +9,7 @@
 #include "Accounts_Framework/mainpage.h"
 #include "Accounts_Framework/landingpage.h"
 #include "Game1-BattleShip/game1view.h"
+#include "Game2-ShootingDiscs/game2view.h"
 
 class AppMainView : public QGraphicsView
 {
@@ -21,6 +22,7 @@ public:
     LandingPage *landingPage;
     mainPage *menuPage;
     Game1View *game1View;
+    Game2View *game2View;
 
     void connectButtons();
 
@@ -32,6 +34,7 @@ public slots:
     void authenticateUser();
     void logOut();
     void playGame1();
+    void playGame2();
 
 };
 
