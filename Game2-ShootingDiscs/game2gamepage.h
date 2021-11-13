@@ -8,6 +8,7 @@
 #include <QLabel>
 #include <QtWidgets>
 #include "lowerpanelbutton.h"
+#include "disk.h"
 
 class Game2GamePage : public QGraphicsScene
 {
@@ -34,12 +35,18 @@ public:
 
     bool endGame = false;
 
+    Disk *diskItem;
+
     void setupScene();
     void setupWidgets();
     void setupGrid();
     void setupButtons();
     void setupLabels();
     void fillScene();
+
+public slots:
+    void addDisk();
+
 
 };
 

@@ -18,6 +18,10 @@ Game2GamePage::Game2GamePage()
     greenButton = new LowerPanelButton(nullptr, 1);
     blueButton = new LowerPanelButton(nullptr, 2);
 
+    QTimer *timer = new QTimer();
+    QObject::connect(timer,SIGNAL(timeout()),this,SLOT(addDisk()));
+    timer->start(2000);
+
     setupScene();
     setupWidgets();
     setupGrid();
@@ -66,4 +70,9 @@ void Game2GamePage::fillScene()
     this->addItem(redButton);
     this->addItem(greenButton);
     this->addItem(blueButton);
+}
+
+void Game2GamePage::addDisk(){
+    diskItem = new Disk();
+    this->addItem(diskItem);
 }

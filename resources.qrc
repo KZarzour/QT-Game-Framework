@@ -268,5 +268,8 @@
         <file>images/down-arrow.jpg</file>
         <file>images/left-arrow.jpg</file>
         <file>images/right-arrow.jpg</file>
+        <file>images/blue-disk.png</file>
+        <file>images/green-disk.jpg</file>
+        <file>images/red-disk.png</file>
     </qresource>
 </RCC>
