@@ -15,10 +15,10 @@ class Disk : public QObject, public  QGraphicsPixmapItem
 {
     Q_OBJECT
 public:
-    Disk(QObject *parent = nullptr);
+    Disk(QObject *parent = nullptr,int gameSpeed=0);
 
     int type;
-
+    int gameSpeed=0;
 public:
     QTimer *timer;
 

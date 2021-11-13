@@ -9,6 +9,8 @@
 #include <QtWidgets>
 #include "lowerpanelbutton.h"
 #include "disk.h"
+#include <string>
+#include "../Accounts_Framework/user.h"
 
 class Game2GamePage : public QGraphicsScene
 {
@@ -28,6 +30,8 @@ public:
     QLabel *highScore;
     QLabel *currentScoreValue;
     QLabel *highScoreValue;
+    QLabel *missedDisks;
+    QLabel *missedDisksValue;
 
     LowerPanelButton *redButton;
     LowerPanelButton *greenButton;
@@ -37,12 +41,23 @@ public:
 
     Disk *diskItem;
 
+    User *activeUser;
+
+    int currentUserScore;
+    int highestScore;
+    int currentMissedDisks;
+
+    int gameSpeed;
+
     void setupScene();
     void setupWidgets();
     void setupGrid();
     void setupButtons();
     void setupLabels();
     void fillScene();
+    void start();
+    void incrementScore(int n);
+    void incrementMisses();
 
 public slots:
     void addDisk();

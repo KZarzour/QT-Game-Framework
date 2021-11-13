@@ -1,7 +1,9 @@
 #include "disk.h"
 
-Disk::Disk(QObject *parent) : QObject(parent)
+Disk::Disk(QObject *parent, int gameSpeed) : QObject(parent)
 {
+    this->gameSpeed=gameSpeed;
+
     type = rand()%3;
     if(type ==0){
         this->setPixmap((QPixmap(":/images/red-disk.png")).scaled(30,30));
@@ -23,14 +25,7 @@ Disk::Disk(QObject *parent) : QObject(parent)
 }
 
 void Disk:: update(){
-    this->setPos(this->x(),this->y()+20);
-    /*QList<QGraphicsItem *> list = collidingItems();
-    foreach (QGraphicsItem *i, list) {
-        if(dynamic_cast<LowerPanelButton*>(i)){
-            scene()->removeItem(this);
-            delete this;
-        }
-    }*/
+    this->setPos(this->x(),this->y()+20*(gameSpeed+1));
     if(this->y()>=800){
         scene()->removeItem(this);
         delete this;

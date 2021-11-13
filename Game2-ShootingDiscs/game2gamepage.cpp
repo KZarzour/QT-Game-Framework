@@ -9,18 +9,22 @@ Game2GamePage::Game2GamePage()
 
     home = new QPushButton("Home");
 
+    gameSpeed =0;
+
+    currentUserScore=0;
+    highestScore= activeUser ? activeUser->game2HighScore : 0;
+    currentMissedDisks=0;
+
     currentScore = new QLabel("Current Score");
     highScore = new QLabel("High Score");
-    currentScoreValue = new QLabel("0");
-    highScoreValue = new QLabel("123");
+    currentScoreValue = new QLabel(QString::number(currentUserScore));
+    highScoreValue = new QLabel(QString::number(highestScore));
+    missedDisks = new QLabel("Missed Disks");
+    missedDisksValue = new QLabel(QString::number(currentMissedDisks));
 
     redButton = new LowerPanelButton(nullptr, 0);
     greenButton = new LowerPanelButton(nullptr, 1);
     blueButton = new LowerPanelButton(nullptr, 2);
-
-    QTimer *timer = new QTimer();
-    QObject::connect(timer,SIGNAL(timeout()),this,SLOT(addDisk()));
-    timer->start(2000);
 
     setupScene();
     setupWidgets();
@@ -49,6 +53,14 @@ void Game2GamePage::setupWidgets(){
     highScoreValue->setGeometry(900,300,500,80);
     highScoreValue->setAttribute(Qt::WA_NoSystemBackground);
     highScoreValue->setStyleSheet("QLabel { font-size: 18px; font-weight: bold; color: green}");
+
+    missedDisks->setGeometry(700,450,500,80);
+    missedDisks->setAttribute(Qt::WA_NoSystemBackground);
+    missedDisks->setStyleSheet("QLabel { font-size: 18px; font-weight: bold; color: white}");
+
+    missedDisksValue->setGeometry(900,450,500,80);
+    missedDisksValue->setAttribute(Qt::WA_NoSystemBackground);
+    missedDisksValue->setStyleSheet("QLabel { font-size: 18px; font-weight: bold; color: red}");
 }
 
 void Game2GamePage::setupGrid()
@@ -64,6 +76,8 @@ void Game2GamePage::fillScene()
     this->addWidget(highScore);
     this->addWidget(currentScoreValue);
     this->addWidget(highScoreValue);
+    this->addWidget(missedDisks);
+    this->addWidget(missedDisksValue);
 
     this->addItem(gameGrid);
 
@@ -71,8 +85,24 @@ void Game2GamePage::fillScene()
     this->addItem(greenButton);
     this->addItem(blueButton);
 }
+void Game2GamePage::start(){
+    QTimer *timer = new QTimer();
+    QObject::connect(timer,SIGNAL(timeout()),this,SLOT(addDisk()));
+    timer->start(2000);
+}
 
 void Game2GamePage::addDisk(){
-    diskItem = new Disk();
+    diskItem = new Disk(nullptr,gameSpeed);
     this->addItem(diskItem);
+}
+
+void Game2GamePage::incrementScore(int n){
+    int currScore = currentScoreValue->text().toInt();
+    currScore+=n;
+    currentScoreValue->setText(QString::number(currScore));
+    //checkGameStatus()
+    this->gameSpeed = currScore/30;
+}
+void Game2GamePage::incrementMisses(){
+
 }
