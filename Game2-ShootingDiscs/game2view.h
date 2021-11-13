@@ -7,6 +7,7 @@
 #include <numeric>
 #include "../Accounts_Framework/user.h"
 #include "../Accounts_Framework/jsonutils.h"
+#include "game2welcomepage.h"
 #include <string>
 
 class Game2View : public QGraphicsView
@@ -18,6 +19,14 @@ public:
     User *activeUser = NULL;
     QGraphicsView *appMainView;
     JsonUtils *jsonUtils;
+
+    Game2WelcomePage *welcomePage;
+
+    void keyPressEvent(QKeyEvent *event);
+    void connectButtons();
+
+    public slots:
+        void startGame();
 };
 
 #endif // GAME2VIEW_H
