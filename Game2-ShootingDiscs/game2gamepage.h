@@ -7,6 +7,7 @@
 #include <QGraphicsPixmapItem>
 #include <QLabel>
 #include <QtWidgets>
+#include "lowerpanelbutton.h"
 
 class Game2GamePage : public QGraphicsScene
 {
@@ -27,6 +28,10 @@ public:
     QLabel *currentScoreValue;
     QLabel *highScoreValue;
 
+    LowerPanelButton *redButton;
+    LowerPanelButton *greenButton;
+    LowerPanelButton *blueButton;
+
     bool endGame = false;
 
     void setupScene();
@@ -35,6 +40,7 @@ public:
     void setupButtons();
     void setupLabels();
     void fillScene();
+
 };
 
 #endif // GAME2GAMEPAGE_H

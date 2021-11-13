@@ -19,6 +19,15 @@ void Game2View::keyPressEvent(QKeyEvent *event){
     if(event->key() == Qt::Key_F1 && (this->scene()==welcomePage)){
         this->startGame();
     }
+    if(event->key() == Qt::Key_Down && (this->scene()==gamePage)){
+        qDebug()<<"Down Pressed";
+    }
+    if(event->key() == Qt::Key_Left && (this->scene()==gamePage)){
+        qDebug()<<"Left Pressed";
+    }
+    if(event->key() == Qt::Key_Right && (this->scene()==gamePage)){
+        qDebug()<<"Right Pressed";
+    }
 }
 
 

@@ -264,5 +264,9 @@
         <file>images/grid.png</file>
         <file>images/big-boat.png</file>
         <file>images/small-boat.png</file>
+        <file>images/game2-bg.jpg</file>
+        <file>images/down-arrow.jpg</file>
+        <file>images/left-arrow.jpg</file>
+        <file>images/right-arrow.jpg</file>
     </qresource>
 </RCC>
