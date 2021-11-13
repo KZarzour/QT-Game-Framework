@@ -6,6 +6,7 @@ Game2View::Game2View()
     jsonUtils = new JsonUtils();
 
     welcomePage = new Game2WelcomePage();
+    gamePage =new Game2GamePage();
 
     this->setHorizontalScrollBarPolicy((Qt::ScrollBarAlwaysOff));
     this->setVerticalScrollBarPolicy((Qt::ScrollBarAlwaysOff));
@@ -26,8 +27,6 @@ void Game2View::connectButtons(){
 }
 
 void Game2View::startGame(){
-    //this->setScene(gamePage);
-    //panel->show();
-    //page->show();
+    this->setScene(gamePage);
     qDebug()<<"Starting";
 }

@@ -8,6 +8,7 @@
 #include "../Accounts_Framework/user.h"
 #include "../Accounts_Framework/jsonutils.h"
 #include "game2welcomepage.h"
+#include "game2gamepage.h"
 #include <string>
 
 class Game2View : public QGraphicsView
@@ -21,6 +22,8 @@ public:
     JsonUtils *jsonUtils;
 
     Game2WelcomePage *welcomePage;
+    Game2GamePage *gamePage;
+
 
     void keyPressEvent(QKeyEvent *event);
     void connectButtons();
