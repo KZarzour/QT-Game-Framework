@@ -29,6 +29,5 @@ void Disk:: update(){
     if(this->y()>=800){
         scene()->removeItem(this);
         delete this;
-        //add code to handle missed disk
     }
 }

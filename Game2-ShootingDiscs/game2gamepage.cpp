@@ -23,7 +23,6 @@ Game2GamePage::Game2GamePage()
     highScoreValue = new QLabel(QString::number(highestScore));
     missedDisks = new QLabel("Missed Disks");
     missedDisksValue = new QLabel(QString::number(currentMissedDisks));
-    //missedDiskZone = new QLabel();
 
     redButton = new LowerPanelButton(nullptr, 0);
     greenButton = new LowerPanelButton(nullptr, 1);
@@ -70,9 +69,6 @@ void Game2GamePage::setupWidgets(){
     missedDisksValue->setAttribute(Qt::WA_NoSystemBackground);
     missedDisksValue->setStyleSheet("QLabel { font-size: 18px; font-weight: bold; color: red}");
 
-    //missedDiskZone->setGeometry(100,800,300,500);
-    //missedDiskZone->setStyleSheet("background-color: white");
-
     home->setGeometry(500,700,100,50);
     home->hide();
 }
@@ -112,31 +108,24 @@ void Game2GamePage::start(){
 }
 
 void Game2GamePage::addDisk(){
-    //checkMissedDisks();
     diskItem = new Disk(nullptr,gameSpeed);
     this->addItem(diskItem);
 }
 
 void Game2GamePage::checkMissedDisks(){
-
     QList<QGraphicsItem *> list = mdz->collidingItems();
     foreach (QGraphicsItem *i, list) {
-
         delete i;
         qDebug()<<"Disk collides";
         incrementMisses();
         break;
-
     }
-
-
 }
 
 void Game2GamePage::incrementScore(int n){
     int currScore = currentScoreValue->text().toInt();
     currScore+=n;
     currentScoreValue->setText(QString::number(currScore));
-    //checkGameStatus()
     this->gameSpeed = currScore/30;
     if  (currScore >=150){
         finishGame();
@@ -144,7 +133,7 @@ void Game2GamePage::incrementScore(int n){
 }
 void Game2GamePage::incrementMisses(){
     currentMissedDisks++;
-    missedDisksValue->setText((QString) currentMissedDisks);
+    missedDisksValue->setText(QString::number(currentMissedDisks));
     if (currentMissedDisks>=3){
         finishGame();
     }
@@ -158,13 +147,21 @@ void Game2GamePage::finishGame(){
     if (currScore>=5){
         gameResult->setText("You Won!");
         gameResult->setStyleSheet("QLabel { font-size: 32px; font-weight: bold; color: green}");
-        gameResult->show();
     }
     else{
         gameResult->setText("You Lost :(");
-        gameResult->setStyleSheet("QLabel { font-size: 32px; font-weight: bold; color: red}");
-        gameResult->show();
+        gameResult->setStyleSheet("QLabel { font-size: 32px; font-weight: bold; color: red}");        
     }
+
+    QList<QGraphicsItem *> list = gameGrid->collidingItems();
+    foreach (QGraphicsItem *i, list) {
+        if (i->y()<750){
+            delete i;
+            qDebug()<<"Disk Deleted";
+        }
+    }
+
+    gameResult->show();
     home->show();
 
 
