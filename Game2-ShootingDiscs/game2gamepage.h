@@ -32,6 +32,7 @@ public:
     QLabel *highScoreValue;
     QLabel *missedDisks;
     QLabel *missedDisksValue;
+    QLabel *gameResult;
 
     LowerPanelButton *redButton;
     LowerPanelButton *greenButton;
@@ -58,6 +59,7 @@ public:
     void start();
     void incrementScore(int n);
     void incrementMisses();
+    void finishGame();
 
 public slots:
     void addDisk();

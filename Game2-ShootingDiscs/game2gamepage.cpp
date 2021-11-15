@@ -15,6 +15,7 @@ Game2GamePage::Game2GamePage()
     highestScore= activeUser ? activeUser->game2HighScore : 0;
     currentMissedDisks=0;
 
+    gameResult = new QLabel("You won");
     currentScore = new QLabel("Current Score");
     highScore = new QLabel("High Score");
     currentScoreValue = new QLabel(QString::number(currentUserScore));
@@ -38,6 +39,11 @@ void Game2GamePage::setupScene(){
     this->setBackgroundBrush(QBrush(QImage(":/images/pannel-bg.jpg")));
 }
 void Game2GamePage::setupWidgets(){
+    gameResult->setGeometry(700,600,500,80);
+    gameResult->setAttribute(Qt::WA_NoSystemBackground);
+    gameResult->setStyleSheet("QLabel { font-size: 32px; font-weight: bold; color: green}");
+    gameResult->hide();
+
     currentScore->setGeometry(700,150,500,80);
     currentScore->setAttribute(Qt::WA_NoSystemBackground);
     currentScore->setStyleSheet("QLabel { font-size: 18px; font-weight: bold; color: white}");
@@ -72,6 +78,7 @@ void Game2GamePage::setupGrid()
 
 void Game2GamePage::fillScene()
 {
+    this->addWidget(gameResult);
     this->addWidget(currentScore);
     this->addWidget(highScore);
     this->addWidget(currentScoreValue);
@@ -102,7 +109,17 @@ void Game2GamePage::incrementScore(int n){
     currentScoreValue->setText(QString::number(currScore));
     //checkGameStatus()
     this->gameSpeed = currScore/30;
+    if  (currScore >=30){
+        finishGame();
+    }
 }
 void Game2GamePage::incrementMisses(){
 
 }
+
+void Game2GamePage::finishGame(){
+    endGame=true;
+    timer
+    gameResult->show();
+}
+
