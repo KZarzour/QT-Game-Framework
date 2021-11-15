@@ -16,7 +16,7 @@ Game2GamePage::Game2GamePage()
     currentUserScore=0;
     highestScore= activeUser ? activeUser->game2HighScore : 0;
     currentMissedDisks=0;
-
+    //qDebug()<<activeUser->game2HighScore;
     gameResult = new QLabel();
     currentScore = new QLabel("Current Score");
     highScore = new QLabel("High Score");
@@ -33,8 +33,6 @@ Game2GamePage::Game2GamePage()
     setupScene();
     setupWidgets();
     setupGrid();
-    /*setupButtons();
-    setupLabels();*/
     fillScene();
 }
 void Game2GamePage::setupScene(){
@@ -162,8 +160,6 @@ void Game2GamePage::finishGame(){
     }
 
     gameResult->show();
-    qDebug()<<"Pre-User Handling";
-    qDebug()<<activeUser;
 
     if (activeUser){
         qDebug()<<currentUserScore;
@@ -174,7 +170,6 @@ void Game2GamePage::finishGame(){
         jsonUtils->updateScores(activeUser->username,activeUser->game2Scores,activeUser->game2HighScore,1);
     }
 
-    qDebug()<<"Post User Handling";
 }
 
 
