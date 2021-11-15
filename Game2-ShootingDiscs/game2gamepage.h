@@ -11,6 +11,7 @@
 #include "disk.h"
 #include <string>
 #include "../Accounts_Framework/user.h"
+#include "misseddiskzone.h"
 
 class Game2GamePage : public QGraphicsScene
 {
@@ -33,11 +34,13 @@ public:
     QLabel *missedDisks;
     QLabel *missedDisksValue;
     QLabel *gameResult;
-    QLabel *missedDiskZone;
+    //QLabel *missedDiskZone;
 
     LowerPanelButton *redButton;
     LowerPanelButton *greenButton;
     LowerPanelButton *blueButton;
+
+    missedDiskZone *mdz;
 
     bool endGame = false;
 
@@ -63,10 +66,11 @@ public:
     void incrementScore(int n);
     void incrementMisses();
     void finishGame();
-    void checkMissedDisks();
+
 
 public slots:
     void addDisk();
+    void checkMissedDisks();
 
 
 };

@@ -23,11 +23,12 @@ Game2GamePage::Game2GamePage()
     highScoreValue = new QLabel(QString::number(highestScore));
     missedDisks = new QLabel("Missed Disks");
     missedDisksValue = new QLabel(QString::number(currentMissedDisks));
-    missedDiskZone = new QLabel();
+    //missedDiskZone = new QLabel();
 
     redButton = new LowerPanelButton(nullptr, 0);
     greenButton = new LowerPanelButton(nullptr, 1);
     blueButton = new LowerPanelButton(nullptr, 2);
+    mdz = new missedDiskZone(nullptr);
 
     setupScene();
     setupWidgets();
@@ -69,8 +70,8 @@ void Game2GamePage::setupWidgets(){
     missedDisksValue->setAttribute(Qt::WA_NoSystemBackground);
     missedDisksValue->setStyleSheet("QLabel { font-size: 18px; font-weight: bold; color: red}");
 
-    missedDiskZone->setGeometry(100,800,300,500);
-    missedDiskZone->setStyleSheet("background-color: white");
+    //missedDiskZone->setGeometry(100,800,300,500);
+    //missedDiskZone->setStyleSheet("background-color: white");
 
     home->setGeometry(500,700,100,50);
     home->hide();
@@ -92,7 +93,7 @@ void Game2GamePage::fillScene()
     this->addWidget(highScoreValue);
     this->addWidget(missedDisks);
     this->addWidget(missedDisksValue);
-    this->addWidget(missedDiskZone);
+    this->addItem(mdz);
     this->addWidget(home);
     this->addItem(gameGrid);
 
@@ -103,18 +104,31 @@ void Game2GamePage::fillScene()
 
 }
 void Game2GamePage::start(){
-    //QTimer *timer = new QTimer();
     QObject::connect(timer,SIGNAL(timeout()),this,SLOT(addDisk()));
     timer->start(2000);
+    QTimer *detectingTimer = new QTimer();
+    QObject::connect(detectingTimer,SIGNAL(timeout()),this,SLOT(checkMissedDisks()));
+    detectingTimer->start(100);
 }
 
 void Game2GamePage::addDisk(){
-    checkMissedDisks();
+    //checkMissedDisks();
     diskItem = new Disk(nullptr,gameSpeed);
     this->addItem(diskItem);
 }
 
 void Game2GamePage::checkMissedDisks(){
+
+    QList<QGraphicsItem *> list = mdz->collidingItems();
+    foreach (QGraphicsItem *i, list) {
+
+        delete i;
+        qDebug()<<"Disk collides";
+        incrementMisses();
+        break;
+
+    }
+
 
 }
 
@@ -124,12 +138,16 @@ void Game2GamePage::incrementScore(int n){
     currentScoreValue->setText(QString::number(currScore));
     //checkGameStatus()
     this->gameSpeed = currScore/30;
-    if  (currScore >=5){
+    if  (currScore >=150){
         finishGame();
     }
 }
 void Game2GamePage::incrementMisses(){
-
+    currentMissedDisks++;
+    missedDisksValue->setText((QString) currentMissedDisks);
+    if (currentMissedDisks>=3){
+        finishGame();
+    }
 }
 
 void Game2GamePage::finishGame(){
@@ -151,4 +169,6 @@ void Game2GamePage::finishGame(){
 
 
 }
+
+
 

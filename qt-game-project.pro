@@ -17,6 +17,7 @@ SOURCES += \
     Game2-ShootingDiscs/game2view.cpp \
     Game2-ShootingDiscs/game2welcomepage.cpp \
     Game2-ShootingDiscs/lowerpanelbutton.cpp \
+    Game2-ShootingDiscs/misseddiskzone.cpp \
     appmainview.cpp \
     main.cpp
 
@@ -37,6 +38,7 @@ HEADERS += \
     Game2-ShootingDiscs/game2view.h \
     Game2-ShootingDiscs/game2welcomepage.h \
     Game2-ShootingDiscs/lowerpanelbutton.h \
+    Game2-ShootingDiscs/misseddiskzone.h \
     appmainview.h
 
 RESOURCES += \

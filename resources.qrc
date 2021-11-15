@@ -271,5 +271,6 @@
         <file>images/blue-disk.png</file>
         <file>images/green-disk.jpg</file>
         <file>images/red-disk.png</file>
+        <file>images/transparent.png</file>
     </qresource>
 </RCC>
