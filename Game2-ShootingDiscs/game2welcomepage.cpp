@@ -17,7 +17,6 @@ void Game2WelcomePage::setupScene(){
     gameInsructions->setWindowFlag(Qt::FramelessWindowHint);
     gameInsructions->setAttribute(Qt::WA_NoSystemBackground);
     gameInsructions->setStyleSheet("QLabel { font-size: 18px;font-family: Arial; font-weight: bold; color: white}");
-    //gameInsructions->setAlignment(Qt::AlignCenter);
     gameInsructions->setWordWrap(true);
     gameInsructions->setGeometry(250,400,400,100);
 
