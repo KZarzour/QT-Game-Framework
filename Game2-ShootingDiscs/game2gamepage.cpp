@@ -2,6 +2,7 @@
 
 Game2GamePage::Game2GamePage()
 {
+    jsonUtils =new JsonUtils();
     leftArrow = new QGraphicsPixmapItem();
     downArrow = new QGraphicsPixmapItem();
     rightArrow = new QGraphicsPixmapItem();
@@ -122,11 +123,11 @@ void Game2GamePage::checkMissedDisks(){
 }
 
 void Game2GamePage::incrementScore(int n){
-    int currScore = currentScoreValue->text().toInt();
-    currScore+=n;
-    currentScoreValue->setText(QString::number(currScore));
-    this->gameSpeed = currScore/30;
-    if  (currScore >=150){
+    //int currScore = currentScoreValue->text().toInt();
+    currentUserScore+=n;
+    currentScoreValue->setText(QString::number(currentUserScore));
+    this->gameSpeed = currentUserScore/30;
+    if  (currentUserScore >=80){
         finishGame();
     }
 }
@@ -159,9 +160,14 @@ void Game2GamePage::finishGame(){
             qDebug()<<"Disk Deleted";
         }
     }
-
+    qDebug()<<"GAME ENDED";
     gameResult->show();
-
+    qDebug()<<currentUserScore;
+    activeUser->game2Scores.push_back(currentUserScore);
+    if (currentUserScore>activeUser->game2HighScore){
+        activeUser->game2HighScore=currentUserScore;
+    }
+    jsonUtils->updateScores(activeUser->username,activeUser->game2Scores,activeUser->game2HighScore,1);
 
 }
 

@@ -12,12 +12,16 @@
 #include <string>
 #include "../Accounts_Framework/user.h"
 #include "misseddiskzone.h"
+#include "../Accounts_Framework/jsonutils.h"
+
 
 class Game2GamePage : public QGraphicsScene
 {
     Q_OBJECT
 public:
     Game2GamePage();
+
+    JsonUtils *jsonUtils;
 
     QGraphicsPixmapItem *leftArrow;
     QGraphicsPixmapItem *downArrow;
@@ -34,7 +38,6 @@ public:
     QLabel *missedDisks;
     QLabel *missedDisksValue;
     QLabel *gameResult;
-    //QLabel *missedDiskZone;
 
     LowerPanelButton *redButton;
     LowerPanelButton *greenButton;
