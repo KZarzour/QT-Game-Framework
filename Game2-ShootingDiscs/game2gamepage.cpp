@@ -7,6 +7,7 @@ Game2GamePage::Game2GamePage()
     rightArrow = new QGraphicsPixmapItem();
     gameGrid = new QGraphicsPixmapItem();
 
+    timer = new QTimer();
     home = new QPushButton("Home");
 
     gameSpeed =0;
@@ -15,13 +16,14 @@ Game2GamePage::Game2GamePage()
     highestScore= activeUser ? activeUser->game2HighScore : 0;
     currentMissedDisks=0;
 
-    gameResult = new QLabel("You won");
+    gameResult = new QLabel();
     currentScore = new QLabel("Current Score");
     highScore = new QLabel("High Score");
     currentScoreValue = new QLabel(QString::number(currentUserScore));
     highScoreValue = new QLabel(QString::number(highestScore));
     missedDisks = new QLabel("Missed Disks");
     missedDisksValue = new QLabel(QString::number(currentMissedDisks));
+    missedDiskZone = new QLabel();
 
     redButton = new LowerPanelButton(nullptr, 0);
     greenButton = new LowerPanelButton(nullptr, 1);
@@ -41,7 +43,6 @@ void Game2GamePage::setupScene(){
 void Game2GamePage::setupWidgets(){
     gameResult->setGeometry(700,600,500,80);
     gameResult->setAttribute(Qt::WA_NoSystemBackground);
-    gameResult->setStyleSheet("QLabel { font-size: 32px; font-weight: bold; color: green}");
     gameResult->hide();
 
     currentScore->setGeometry(700,150,500,80);
@@ -60,13 +61,19 @@ void Game2GamePage::setupWidgets(){
     highScoreValue->setAttribute(Qt::WA_NoSystemBackground);
     highScoreValue->setStyleSheet("QLabel { font-size: 18px; font-weight: bold; color: green}");
 
-    missedDisks->setGeometry(700,450,500,80);
+    missedDisks->setGeometry(700,450,500,200);
     missedDisks->setAttribute(Qt::WA_NoSystemBackground);
     missedDisks->setStyleSheet("QLabel { font-size: 18px; font-weight: bold; color: white}");
 
     missedDisksValue->setGeometry(900,450,500,80);
     missedDisksValue->setAttribute(Qt::WA_NoSystemBackground);
     missedDisksValue->setStyleSheet("QLabel { font-size: 18px; font-weight: bold; color: red}");
+
+    missedDiskZone->setGeometry(100,800,300,500);
+    missedDiskZone->setStyleSheet("background-color: white");
+
+    home->setGeometry(500,700,100,50);
+    home->hide();
 }
 
 void Game2GamePage::setupGrid()
@@ -85,22 +92,30 @@ void Game2GamePage::fillScene()
     this->addWidget(highScoreValue);
     this->addWidget(missedDisks);
     this->addWidget(missedDisksValue);
-
+    this->addWidget(missedDiskZone);
+    this->addWidget(home);
     this->addItem(gameGrid);
 
     this->addItem(redButton);
     this->addItem(greenButton);
     this->addItem(blueButton);
+
+
 }
 void Game2GamePage::start(){
-    QTimer *timer = new QTimer();
+    //QTimer *timer = new QTimer();
     QObject::connect(timer,SIGNAL(timeout()),this,SLOT(addDisk()));
     timer->start(2000);
 }
 
 void Game2GamePage::addDisk(){
+    checkMissedDisks();
     diskItem = new Disk(nullptr,gameSpeed);
     this->addItem(diskItem);
+}
+
+void Game2GamePage::checkMissedDisks(){
+
 }
 
 void Game2GamePage::incrementScore(int n){
@@ -109,7 +124,7 @@ void Game2GamePage::incrementScore(int n){
     currentScoreValue->setText(QString::number(currScore));
     //checkGameStatus()
     this->gameSpeed = currScore/30;
-    if  (currScore >=30){
+    if  (currScore >=5){
         finishGame();
     }
 }
@@ -119,7 +134,21 @@ void Game2GamePage::incrementMisses(){
 
 void Game2GamePage::finishGame(){
     endGame=true;
-    timer
-    gameResult->show();
+    timer->stop();
+
+    int currScore = currentScoreValue->text().toInt();
+    if (currScore>=5){
+        gameResult->setText("You Won!");
+        gameResult->setStyleSheet("QLabel { font-size: 32px; font-weight: bold; color: green}");
+        gameResult->show();
+    }
+    else{
+        gameResult->setText("You Lost :(");
+        gameResult->setStyleSheet("QLabel { font-size: 32px; font-weight: bold; color: red}");
+        gameResult->show();
+    }
+    home->show();
+
+
 }
 
