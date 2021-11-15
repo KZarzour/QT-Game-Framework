@@ -26,8 +26,10 @@ Disk::Disk(QObject *parent, int gameSpeed) : QObject(parent)
 
 void Disk:: update(){
     this->setPos(this->x(),this->y()+20*(gameSpeed+1));
+    /*
     if(this->y()>=800){
         scene()->removeItem(this);
         delete this;
     }
+    */
 }

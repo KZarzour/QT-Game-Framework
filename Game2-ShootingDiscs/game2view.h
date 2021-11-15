@@ -30,6 +30,7 @@ public:
 
     public slots:
         void startGame();
+        void goToHome();
 };
 
 #endif // GAME2VIEW_H

@@ -70,7 +70,6 @@ void Game2GamePage::setupWidgets(){
     missedDisksValue->setStyleSheet("QLabel { font-size: 18px; font-weight: bold; color: red}");
 
     home->setGeometry(500,700,100,50);
-    home->hide();
 }
 
 void Game2GamePage::setupGrid()
@@ -162,7 +161,6 @@ void Game2GamePage::finishGame(){
     }
 
     gameResult->show();
-    home->show();
 
 
 }

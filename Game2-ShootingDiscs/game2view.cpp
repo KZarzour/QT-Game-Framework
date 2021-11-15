@@ -67,6 +67,8 @@ void Game2View::keyPressEvent(QKeyEvent *event){
 
 void Game2View::connectButtons(){
     QObject::connect(welcomePage->playGame,SIGNAL(clicked(bool)),this,SLOT(startGame()));
+
+    QObject::connect(gamePage->home,SIGNAL(clicked(bool)),this,SLOT(goToHome()));
 }
 
 void Game2View::startGame(){
@@ -76,4 +78,12 @@ void Game2View::startGame(){
     }
     gamePage->start();
     qDebug()<<"Starting";
+}
+
+
+void Game2View::goToHome(){
+    gamePage->finishGame();
+    this->setScene(welcomePage);
+    this->hide();
+    appMainView->show();
 }
