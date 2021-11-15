@@ -49,7 +49,7 @@ public:
 
     Disk *diskItem;
 
-    User *activeUser;
+    User *activeUser = NULL;
 
     QTimer *timer;
 

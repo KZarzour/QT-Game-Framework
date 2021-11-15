@@ -42,7 +42,7 @@ void Game2GamePage::setupScene(){
     this->setBackgroundBrush(QBrush(QImage(":/images/pannel-bg.jpg")));
 }
 void Game2GamePage::setupWidgets(){
-    gameResult->setGeometry(700,600,500,80);
+    gameResult->setGeometry(700,600,0,0);
     gameResult->setAttribute(Qt::WA_NoSystemBackground);
     gameResult->hide();
 
@@ -142,7 +142,7 @@ void Game2GamePage::incrementMisses(){
 void Game2GamePage::finishGame(){
     endGame=true;
     timer->stop();
-
+    qDebug()<<"GAME ENDED";
     int currScore = currentScoreValue->text().toInt();
     if (currScore>=5){
         gameResult->setText("You Won!");
@@ -160,15 +160,21 @@ void Game2GamePage::finishGame(){
             qDebug()<<"Disk Deleted";
         }
     }
-    qDebug()<<"GAME ENDED";
-    gameResult->show();
-    qDebug()<<currentUserScore;
-    activeUser->game2Scores.push_back(currentUserScore);
-    if (currentUserScore>activeUser->game2HighScore){
-        activeUser->game2HighScore=currentUserScore;
-    }
-    jsonUtils->updateScores(activeUser->username,activeUser->game2Scores,activeUser->game2HighScore,1);
 
+    gameResult->show();
+    qDebug()<<"Pre-User Handling";
+    qDebug()<<activeUser;
+
+    if (activeUser){
+        qDebug()<<currentUserScore;
+        activeUser->game2Scores.push_back(currentUserScore);
+        if (currentUserScore>activeUser->game2HighScore){
+            activeUser->game2HighScore=currentUserScore;
+        }
+        jsonUtils->updateScores(activeUser->username,activeUser->game2Scores,activeUser->game2HighScore,1);
+    }
+
+    qDebug()<<"Post User Handling";
 }
 
 
