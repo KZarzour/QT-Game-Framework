@@ -82,7 +82,8 @@ void Game2View::startGame(){
 
 
 void Game2View::goToHome(){
-    gamePage->finishGame();
+    gamePage->interuptGame();
+    gamePage->gameResult->hide();
     this->setScene(welcomePage);
     this->hide();
     appMainView->show();

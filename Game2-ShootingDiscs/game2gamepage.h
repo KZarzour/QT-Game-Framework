@@ -69,6 +69,7 @@ public:
     void incrementScore(int n);
     void incrementMisses();
     void finishGame();
+    void interuptGame();
 
 
 public slots:

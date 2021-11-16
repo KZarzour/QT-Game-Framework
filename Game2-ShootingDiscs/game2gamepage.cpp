@@ -172,4 +172,18 @@ void Game2GamePage::finishGame(){
 }
 
 
+void Game2GamePage::interuptGame(){
+    endGame=true;
+    timer->stop();
+    qDebug()<<"Game interrupted";
+    QList<QGraphicsItem *> list = gameGrid->collidingItems();
+    foreach (QGraphicsItem *i, list) {
+        if (i->y()<750){
+            delete i;
+        }
+    }
+
+}
+
+
 
