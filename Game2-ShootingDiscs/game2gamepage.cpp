@@ -125,7 +125,7 @@ void Game2GamePage::incrementScore(int n){
     currentUserScore+=n;
     currentScoreValue->setText(QString::number(currentUserScore));
     this->gameSpeed = currentUserScore/30;
-    if  (currentUserScore >=80){
+    if  (currentUserScore >=150){
         finishGame();
     }
 }
@@ -142,7 +142,7 @@ void Game2GamePage::finishGame(){
     timer->stop();
     qDebug()<<"GAME ENDED";
     int currScore = currentScoreValue->text().toInt();
-    if (currScore>=5){
+    if (currScore>=150){
         gameResult->setText("You Won!");
         gameResult->setStyleSheet("QLabel { font-size: 32px; font-weight: bold; color: green}");
     }
