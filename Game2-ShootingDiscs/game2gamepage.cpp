@@ -121,7 +121,6 @@ void Game2GamePage::checkMissedDisks(){
 }
 
 void Game2GamePage::incrementScore(int n){
-    //int currScore = currentScoreValue->text().toInt();
     currentUserScore+=n;
     currentScoreValue->setText(QString::number(currentUserScore));
     this->gameSpeed = currentUserScore/30;
