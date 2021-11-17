@@ -75,6 +75,8 @@ void Game2View::startGame(){
     this->setScene(gamePage);
     if(activeUser){
         gamePage->activeUser = this->activeUser;
+        gamePage->highestScore= activeUser->game2HighScore;
+        gamePage->highScoreValue->setText(QString::number(gamePage->highestScore));
     }
     gamePage->start();
     qDebug()<<"Starting";
