@@ -60,7 +60,7 @@ void Game2GamePage::setupWidgets(){
     highScoreValue->setAttribute(Qt::WA_NoSystemBackground);
     highScoreValue->setStyleSheet("QLabel { font-size: 18px; font-weight: bold; color: green}");
 
-    missedDisks->setGeometry(700,450,500,200);
+    missedDisks->setGeometry(700,390,500,200);
     missedDisks->setAttribute(Qt::WA_NoSystemBackground);
     missedDisks->setStyleSheet("QLabel { font-size: 18px; font-weight: bold; color: white}");
 
