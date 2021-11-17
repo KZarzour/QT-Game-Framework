@@ -147,7 +147,7 @@ void Game2GamePage::finishGame(){
     }
     else{
         gameResult->setText("You Lost :(");
-        gameResult->setStyleSheet("QLabel { font-size: 32px; font-weight: bold; color: red}");        
+        gameResult->setStyleSheet("QLabel { font-size: 32px; font-weight: bold; color: red}");
     }
 
     QList<QGraphicsItem *> list = gameGrid->collidingItems();
@@ -182,7 +182,13 @@ void Game2GamePage::interuptGame(){
             delete i;
         }
     }
-
+    highestScore= activeUser ? activeUser->game2HighScore : currentUserScore;
+    currentUserScore=0;
+    currentMissedDisks =0;
+    gameSpeed=0;
+    currentScoreValue->setText(QString::number(currentUserScore));
+    highScoreValue->setText(QString::number(highestScore));
+    missedDisksValue->setText(QString::number(currentMissedDisks));
 }
 
 
