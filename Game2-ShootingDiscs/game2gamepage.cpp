@@ -182,7 +182,7 @@ void Game2GamePage::interuptGame(){
             delete i;
         }
     }
-    highestScore= activeUser ? activeUser->game2HighScore : currentUserScore;
+    highestScore= currentUserScore>highestScore ? currentUserScore : highestScore;
     currentUserScore=0;
     currentMissedDisks =0;
     gameSpeed=0;
