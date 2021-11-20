@@ -12,6 +12,11 @@ User::User(QObject *parent) : QObject(parent)
 
 }
 
+/*!
+    Gets the User from a QJsonObject
+    \return a user from the users.json
+*/
+
 User::User(QJsonObject user){
     firstName = user["First Name"].toString();
     lastName = user["Last Name"].toString();
@@ -40,6 +45,11 @@ User::User(QJsonObject user){
 
 }
 
+/**
+ * @brief User::userToJson, Transforms a User to a QJsonObject
+ * @return Corresponding QJsonObject
+ */
+
 QJsonObject User::userToJson(){
     QJsonObject obj;
     obj["First Name"] = firstName;
@@ -57,6 +67,11 @@ QJsonObject User::userToJson(){
     return obj;
 }
 
+/**
+ * @brief User::scoresAsJsonArray, Transforms a vector of scores to QJsonArray
+ * @param scores
+ * @return QJsonArray of scores
+ */
 QJsonArray User::scoresAsJsonArray(QVector<int> &scores){
     QJsonArray scoresJson;
         for (int i: scores) {
@@ -65,6 +80,10 @@ QJsonArray User::scoresAsJsonArray(QVector<int> &scores){
         return scoresJson;
 }
 
+/**
+ * @brief User::isUnique, Checks whether a User is unique or not
+ * @return True if unique, False otherwise.
+ */
 bool User::isUnique(){
     QJsonDocument jsonDoc = json.getJsonDocument();
     QJsonArray users = jsonDoc.array();
@@ -76,6 +95,10 @@ bool User::isUnique(){
     return true;
 }
 
+/**
+ * @brief User::isValid, Checks whether User's input is valid
+ * @return true if valid, false otherwise.
+ */
 bool User::isValid(){
 
     if(
@@ -91,7 +114,10 @@ bool User::isValid(){
     }
     return true;
 }
-
+/**
+ * @brief User::findCorrespondingFlag, finds users corresponding flag from phone number
+ * @return encoded flag image
+ */
 QString User::findCorrespondingFlag(){
 
     QString phoneNumber=this->phonenumber;

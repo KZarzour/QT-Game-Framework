@@ -60,7 +60,10 @@ SignupPage::SignupPage(QWidget *parent) : QWidget(parent)
     QObject::connect(signUpB,SIGNAL(clicked(bool)),this,SLOT(addUser()));
     QObject::connect(uploadImageB,SIGNAL(clicked(bool)),this,SLOT(browseImage()));
 }
-
+/**
+ * @brief SignupPage::setupWidgets
+ * Sets the geometry of the widgets
+ */
 void SignupPage::setupWidgets(){
     //GenderVertical Layout
     GenderVerticalL->addWidget(maleRB);
@@ -104,7 +107,11 @@ void SignupPage::setupWidgets(){
     setLayout(viewL);
 //    this->setFixedSize(800,800);
 }
-
+/**
+ * @brief SignupPage::checkPassword, Checks if a password is valid, of size at least 4 and have special chars
+ * @param password
+ * @return True if valid, false otherwise.
+ */
 bool SignupPage::checkPassword(QString password){
     std::string pw = password.toLocal8Bit().constData();
          bool cap = false,
@@ -127,7 +134,11 @@ bool SignupPage::checkPassword(QString password){
          }
          return cap && len && digit && lower;
 }
-
+/**
+ * @brief SignupPage::createUser, Reads the input from the widgets and attemps to create a new user
+ * @return if successful, returns the new user (not yet added to users.json)
+    else, returns NULL
+ */
 User* SignupPage::createUser(){
     if(passwordLE->text()!=confirmPasswordLE->text()){
         warningL->setStyleSheet("color : red");
@@ -183,7 +194,9 @@ User* SignupPage::createUser(){
     this->activeUser=user;
     return user;
 }
-
+/**
+ * @brief SignupPage::clearPage, this methods resets all the widgets that took user input
+ */
 void SignupPage::clearPage(){
     firstNameLE->clear();
     lastNameLE->clear();
@@ -203,7 +216,12 @@ void SignupPage::clearPage(){
     passwordLE->clear();
     confirmPasswordLE->clear();
 }
-
+/**
+ * @brief SignupPage::addUser
+ * Called whenever the signup button is pressed
+ * calls createUser() in order to check all necessary conditions before adding a new user to the users.json file
+ * if createUser() returned a user, setUser() appends it to users.json
+ */
 void SignupPage::addUser(){
     User* user = createUser();
     if(user==NULL){
@@ -213,7 +231,12 @@ void SignupPage::addUser(){
     json.addUserToJson(userJson);
     clearPage();
 }
-
+/**
+ * @brief SignupPage::browseImage
+ *
+ * Takes profile picture file path from user
+ * updates the corresponding class member
+ */
 void SignupPage::browseImage(){
     this->fileName = QFileDialog::getOpenFileName(this,"Browse File","");
 }

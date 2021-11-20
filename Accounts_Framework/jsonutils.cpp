@@ -15,6 +15,10 @@ JsonUtils::JsonUtils()
     //qDebug()<<pathToJsonFile;
 }
 
+/**
+ * \brief Gets the JsonDocument of the file path
+ * \return QJsonDocument of the file path
+*/
 QJsonDocument JsonUtils:: getJsonDocument(){
     QFile file(this->pathToJsonFile);
     file.open(QIODevice::ReadOnly | QIODevice::Text);
@@ -31,7 +35,10 @@ QJsonDocument JsonUtils:: getJsonDocument(){
 
     return jsonDoc;
 }
-
+/**
+ * \brief Takes a newly created user and appends it to the users.json document
+ * \param User Object of type QJson Object
+*/
 void JsonUtils:: addUserToJson(QJsonObject user){
     QJsonDocument jsonDoc = getJsonDocument();
     QJsonArray users = jsonDoc.array();
@@ -42,7 +49,12 @@ void JsonUtils:: addUserToJson(QJsonObject user){
     file.write(jsonDoc.toJson());
     file.close();
 }
-
+/**
+ * \brief Checks if a user who attempted to login has already signed up before
+ * \param username, username of user
+ * \param password, password of user
+ * \return If the login was successful, returns the user as a QJsonObject.Else returns an empty QJSonObject
+*/
 QJsonObject JsonUtils::validateUser(QString &username, QString &password){
     QJsonDocument jsonDoc = getJsonDocument();
     QJsonArray users = jsonDoc.array();
@@ -54,6 +66,13 @@ QJsonObject JsonUtils::validateUser(QString &username, QString &password){
     return QJsonObject();
 }
 
+/**
+ * @brief JsonUtils::updateScores, Update the User Scores in the Json object of the User
+ * @param username, username of User
+ * @param scores, scores Arraylist of user
+ * @param highscore, User's Highscore
+ * @param gameIdentifier, 0 for game1 and 1 for game2
+ */
 void JsonUtils::updateScores(QString username, QVector<int> scores, int highscore, int gameIdentifier){
     QJsonDocument jsonDoc = getJsonDocument();
     QJsonArray users = jsonDoc.array();
@@ -81,7 +100,11 @@ void JsonUtils::updateScores(QString username, QVector<int> scores, int highscor
     file.write(jsonDoc.toJson());
     file.close();
 }
-
+/**
+ * @brief JsonUtils::encodeProfilePicture, Takes a picture, encodes it, and returns the corresponding hashed QJsonValue
+ * @param p, picture
+ * @return QJsonValue for the encoded image
+ */
 QJsonValue JsonUtils::encodeProfilePicture(QPixmap &p){
     QBuffer buffer;
     buffer.open(QIODevice::WriteOnly);
@@ -90,6 +113,11 @@ QJsonValue JsonUtils::encodeProfilePicture(QPixmap &p){
     return {QLatin1String(encoded)};
 }
 
+/**
+ * @brief JsonUtils::decodeProfilePicture, Takes a QJsonValue corresponding to a picture, decodes it, and returns the corresponding QPixmap
+ * @param pic
+ * @return QJsonValue for the decoded image
+ */
 QPixmap JsonUtils::decodeProfilePicture(QJsonValue pic){
   auto const encoded = pic.toString().toLatin1();
   QPixmap p;

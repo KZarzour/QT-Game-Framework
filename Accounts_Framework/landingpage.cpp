@@ -12,6 +12,10 @@
 * \author Maarouf Yassine
 */
 
+/**
+ * @brief LandingPage::LandingPage, sets the geometry of all widgets and labels. Adds them to the scene
+ * @param parent
+ */
 LandingPage::LandingPage(QWidget *parent) : QWidget(parent)
 {
     welcomeLabel= new QLabel("Welcome");
