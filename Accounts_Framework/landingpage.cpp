@@ -4,6 +4,14 @@
 #include <QFont>
 #include <Accounts_Framework/user.h>
 
+/**
+* \file LandingPage.cpp
+* \brief contains definition of landing page that is displayed when user accesses the app.
+*
+* \author Karim Zarzour
+* \author Maarouf Yassine
+*/
+
 LandingPage::LandingPage(QWidget *parent) : QWidget(parent)
 {
     welcomeLabel= new QLabel("Welcome");

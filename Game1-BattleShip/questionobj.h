@@ -6,6 +6,11 @@
 #include <QJsonDocument>
 #include <QtWidgets>
 
+/**
+* \file QuestionObj.h
+* \brief QuestionObj class
+*/
+
 class QuestionObj : public QObject
 {
     Q_OBJECT

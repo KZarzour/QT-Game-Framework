@@ -5,6 +5,11 @@
 #include <QWidget>
 #include <QGraphicsPixmapItem>
 
+/**
+* \file missedDiskZone.h
+* \brief MissedDiskZone class
+*/
+
 class missedDiskZone: public QObject, public  QGraphicsPixmapItem
 {
     Q_OBJECT

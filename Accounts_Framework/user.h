@@ -4,6 +4,11 @@
 #include <QObject>
 #include "jsonutils.h"
 
+/**
+* \file User.h
+* \brief User class
+*/
+
 class User : public QObject
 {
     Q_OBJECT

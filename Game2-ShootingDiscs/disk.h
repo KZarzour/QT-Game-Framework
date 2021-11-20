@@ -11,6 +11,11 @@
 #include <QGraphicsItem>
 #include<QDebug>
 
+/**
+* \file Disk.h
+* \brief Disk class
+*/
+
 class Disk : public QObject, public  QGraphicsPixmapItem
 {
     Q_OBJECT

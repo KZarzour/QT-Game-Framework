@@ -11,6 +11,11 @@
 #include "Game1-BattleShip/game1view.h"
 #include "Game2-ShootingDiscs/game2view.h"
 
+/**
+* \file AppMainView.h
+* \brief AppMainView class
+*/
+
 class AppMainView : public QGraphicsView
 {
     Q_OBJECT

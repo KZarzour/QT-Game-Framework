@@ -5,6 +5,11 @@
 #include <QWidget>
 #include <QGraphicsPixmapItem>
 
+/**
+* \file LowerPanelButton.h
+* \brief LowerPanelButton class
+*/
+
 class LowerPanelButton : public QObject, public  QGraphicsPixmapItem
 {
     Q_OBJECT

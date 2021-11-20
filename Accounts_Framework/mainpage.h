@@ -10,6 +10,11 @@
 #include "Accounts_Framework/user.h"
 #include "Accounts_Framework/jsonutils.h"
 
+/**
+* \file mainPage.h
+* \brief mainPage class
+*/
+
 class mainPage : public QGraphicsScene
 {
     Q_OBJECT

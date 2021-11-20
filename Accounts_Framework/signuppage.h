@@ -10,6 +10,11 @@
 #include "Accounts_Framework/user.h"
 #include "Accounts_Framework/jsonutils.h"
 
+/**
+* \file SignupPage.h
+* \brief SignupPage class
+*/
+
 class SignupPage : public QWidget
 {
     Q_OBJECT

@@ -1,5 +1,11 @@
 #include "game1view.h"
-
+/**
+* \file Game1View.cpp
+* \brief contains the main view of Game 1.
+*
+* \author Karim Zarzour
+* \author Maarouf Yassine
+*/
 Game1View::Game1View()
 {
     activeUser = new User();

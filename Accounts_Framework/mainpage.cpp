@@ -1,5 +1,13 @@
 #include "mainpage.h"
 
+/**
+* \file mainPage.cpp
+* \brief contains initialization of main menu page that is used to access and the games.
+*
+* \author Karim Zarzour
+* \author Maarouf Yassine
+*/
+
 mainPage::mainPage(QObject *parent) : QGraphicsScene(parent)
 {
     this->setSceneRect(0,0,400,800);

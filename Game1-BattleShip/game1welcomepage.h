@@ -6,6 +6,12 @@
 #include <QGraphicsScene>
 #include "../Accounts_Framework/user.h"
 
+
+/**
+* \file Game1WelcomePage.h
+* \brief GAme1WelcomePage class
+*/
+
 class Game1WelcomePage : public QGraphicsScene
 {
     Q_OBJECT

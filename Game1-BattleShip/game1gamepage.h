@@ -9,6 +9,10 @@
 #include "commandpanel.h"
 #include <QtWidgets>
 
+/**
+* \file Game1GamePage.h
+* \brief Game1GamePage class
+*/
 
 class Game1GamePage : public QGraphicsScene
 {

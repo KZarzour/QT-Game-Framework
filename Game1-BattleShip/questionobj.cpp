@@ -1,5 +1,13 @@
 #include "questionobj.h"
 
+/**
+* \file QuestionObj.cpp
+* \brief contains initialization of a question object.
+*
+* \author Karim Zarzour
+* \author Maarouf Yassine
+*/
+
 QuestionObj::QuestionObj(QObject *parent): QObject(parent)
 {
     QJsonObject jsonQuestion = getRandomQuestionFromJsonDocument();

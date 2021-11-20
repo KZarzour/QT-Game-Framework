@@ -1,5 +1,11 @@
 #include "disk.h"
-
+/**
+* \file Disk.cpp
+* \brief contains initialization of a disk object.
+*
+* \author Karim Zarzour
+* \author Maarouf Yassine
+*/
 Disk::Disk(QObject *parent, int gameSpeed) : QObject(parent)
 {
     this->gameSpeed=gameSpeed;

@@ -1,4 +1,11 @@
 #include "game1gamepage.h"
+/**
+* \file Game1GamePage.cpp
+* \brief contains initialization and setting up of game 1(buttons, widgets, displays,...)
+*
+* \author Karim Zarzour
+* \author Maarouf Yassine
+*/
 
 Game1GamePage::Game1GamePage()
 {

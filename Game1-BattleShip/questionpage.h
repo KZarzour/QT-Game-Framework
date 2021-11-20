@@ -6,6 +6,11 @@
 #include <QtWidgets>
 #include "questionobj.h"
 
+/**
+* \file QuestionPage.h
+* \brief QuestionPage class
+*/
+
 class QuestionPage : public QWidget
 {
     Q_OBJECT

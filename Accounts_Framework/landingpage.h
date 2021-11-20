@@ -6,6 +6,11 @@
 #include "Accounts_Framework/user.h"
 #include "Accounts_Framework/jsonutils.h"
 
+/**
+* \file LandingPage.h
+* \brief LandingPage class
+*/
+
 class LandingPage : public QWidget
 {
     Q_OBJECT

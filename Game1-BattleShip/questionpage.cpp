@@ -1,5 +1,13 @@
 #include "questionpage.h"
 
+/**
+* \file QUestionPage.cpp
+* \brief contains initialization of a question page.
+*
+* \author Karim Zarzour
+* \author Maarouf Yassine
+*/
+
 QuestionPage::QuestionPage(QWidget *parent) : QWidget(parent)
 {
 

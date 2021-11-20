@@ -11,6 +11,11 @@
 #include "game2gamepage.h"
 #include <string>
 
+/**
+* \file Game2View.h
+* \brief Game2View class
+*/
+
 class Game2View : public QGraphicsView
 {
     Q_OBJECT

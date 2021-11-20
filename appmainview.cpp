@@ -1,5 +1,11 @@
 #include "appmainview.h"
-
+/**
+* \file AppMainView.cpp
+* \brief contains initialization of main view of the application.
+*
+* \author Karim Zarzour
+* \author Maarouf Yassine
+*/
 AppMainView::AppMainView()
 {
     jsonUtils = new JsonUtils();

@@ -1,5 +1,13 @@
 #include "jsonutils.h"
 
+/**
+* \file JsonUtils.cpp
+* \brief contains Json Utilities needed to access and modify Json files
+*
+* \author Karim Zarzour
+* \author Maarouf Yassine
+*/
+
 JsonUtils::JsonUtils()
 {
     //pathToJsonFile = "/home/eece435l/Documents/Project/qt-game-project/JSON/users.json";

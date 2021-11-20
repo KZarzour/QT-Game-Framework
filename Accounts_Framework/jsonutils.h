@@ -4,6 +4,11 @@
 #include <QJsonDocument>
 #include <QtWidgets>
 
+/**
+* \file JsonUtils.h
+* \brief JsonUtils class
+*/
+
 class JsonUtils
 {
 public:

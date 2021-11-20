@@ -1,5 +1,13 @@
 #include "signuppage.h"
 
+/**
+* \file SignupPage.cpp
+* \brief contains initialization of the Signup page.
+*
+* \author Karim Zarzour
+* \author Maarouf Yassine
+*/
+
 SignupPage::SignupPage(QWidget *parent) : QWidget(parent)
 {
     headerL = new QLabel("Fill This Form To Sign Up");

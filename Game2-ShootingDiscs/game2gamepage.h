@@ -14,6 +14,10 @@
 #include "misseddiskzone.h"
 #include "../Accounts_Framework/jsonutils.h"
 
+/**
+* \file Game2GamePage.h
+* \brief Game2GamePage class
+*/
 
 class Game2GamePage : public QGraphicsScene
 {

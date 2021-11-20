@@ -14,6 +14,11 @@
 #include "../Accounts_Framework/jsonutils.h"
 #include <string>
 
+/**
+* \file Game1View.h
+* \brief Game1View class
+*/
+
 class Game1View : public QGraphicsView
 {
     Q_OBJECT
