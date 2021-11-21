@@ -27,13 +27,19 @@ Game1View::Game1View()
     connectButtons();
 }
 
+/**
+ * @brief Game1View::keyPressEvent, starts the game when F1 Button is pressed
+ * @param event
+ */
 void Game1View::keyPressEvent(QKeyEvent *event){
     if(event->key() == Qt::Key_F1 && (this->scene()==welcomePage)){
        this->startGame();
     }
 }
 
-
+/**
+ * @brief Game1View::connectButtons, connects multiple buttons to their corresponding slots
+ */
 void Game1View::connectButtons(){
     QObject::connect(welcomePage->playGame,SIGNAL(clicked(bool)),this,SLOT(startGame()));
 
@@ -45,12 +51,18 @@ void Game1View::connectButtons(){
     QObject::connect(gamePage->home,SIGNAL(clicked(bool)),this,SLOT(goToHome()));
 }
 
+/**
+ * @brief Game1View::startGame, starts the game and changes scene to gamePage
+ */
 void Game1View::startGame(){
     this->setScene(gamePage);
     panel->show();
     //page->show();
 }
 
+/**
+ * @brief Game1View::correctAnswer, handles case of user entering a correct answer
+ */
 void Game1View::correctAnswer(){
     page->setStyleSheet("background-color: green;");
     currentGameScores.push_back(true);
@@ -65,6 +77,9 @@ void Game1View::correctAnswer(){
     revealBox(x,y);
 }
 
+/**
+ * @brief Game1View::wrongAnswer, handles case of user entering a wrong answer.
+ */
 void Game1View::wrongAnswer(){
     page->setStyleSheet("background-color: red;");
     currentGameScores.push_back(false);
@@ -80,6 +95,9 @@ void Game1View::wrongAnswer(){
     hitHome();
 }
 
+/**
+ * @brief Game1View::hitHome, handles case when user receives a hit from enemy
+ */
 void Game1View::hitHome(){
     gamePage->badAnswers=gamePage->badAnswers+1;
     if (gamePage->badAnswers==1){
@@ -99,6 +117,9 @@ void Game1View::hitHome(){
     }
 }
 
+/**
+ * @brief Game1View::clearQuestionPage, clears question page when the game ends
+ */
 void Game1View::clearQuestionPage(){
     page->questionL->clear();
     page->correctAnswerPB->setText("");
@@ -108,6 +129,9 @@ void Game1View::clearQuestionPage(){
     page->wrongAnswerPB->setEnabled(true);
 }
 
+/**
+ * @brief Game1View::checkCurrGameScores, checks the in-game scores of the active game
+ */
 void Game1View::checkCurrGameScores(){
 
     int numTrue=0;
@@ -134,6 +158,11 @@ void Game1View::checkCurrGameScores(){
         endCurrentGame(true);
     }
 }
+
+/**
+ * @brief Game1View::endCurrentGame, ends game when user either wins or loses
+ * @param winOrLose, true for winning and false for losing
+ */
 void Game1View::endCurrentGame(bool winOrLose){
     if(activeUser){
         if(winOrLose){
@@ -171,6 +200,9 @@ void Game1View::endCurrentGame(bool winOrLose){
 //    this->show();
 }
 
+/**
+ * @brief Game1View::attack, takes input from command panel and attacks respective box in grid
+ */
 void Game1View::attack(){
     QString pos = panel->targetLineEdit->text();
     bool ok;
@@ -201,15 +233,28 @@ void Game1View::attack(){
     }
 }
 
+/**
+ * @brief Game1View::revealBox, reveals box if the user answered its corresponding question correctly, or if no ship is found under the box
+ * @param x representing the x position of the box
+ * @param y representing the y position of the box
+ */
 void Game1View::revealBox(int x, int y){
     gamePage->gridButtons.at(x).at(y)->hide();
 }
 
+/**
+ * @brief Game1View::strikeBox, marks box as red if user misses the correct answer to the question
+ * @param x representing the x coordinate of the box
+ * @param y representing the y coordinate of the box
+ */
 void Game1View::strikeBox(int x, int y){
     gamePage->gridButtons.at(x).at(y)->setStyleSheet("background-color: red");
     //gamePage->boat3Label->setStyleSheet("background-color: red");
 }
 
+/**
+ * @brief Game1View::goToHome, returns the user to home page to choose between the 2 games.
+ */
 void Game1View::goToHome(){
     this->setScene(welcomePage);
     panel->targetLineEdit->clear();

@@ -7,7 +7,10 @@
 * \author Karim Zarzour
 * \author Maarouf Yassine
 */
-
+/**
+ * @brief QuestionObj::QuestionObj, initializes a question object randomly
+ * @param parent
+ */
 QuestionObj::QuestionObj(QObject *parent): QObject(parent)
 {
     QJsonObject jsonQuestion = getRandomQuestionFromJsonDocument();
@@ -15,13 +18,19 @@ QuestionObj::QuestionObj(QObject *parent): QObject(parent)
     trueAnswer = jsonQuestion["T"].toString();
     falseAnswer = jsonQuestion["F"].toString();
 }
-
+/**
+ * @brief QuestionObj::QuestionObj, returns a question object from a json input.
+ * @param jsonQuestion, question read fron json file
+ */
 QuestionObj::QuestionObj(QJsonObject jsonQuestion){
     question = jsonQuestion["Q"].toString();
     trueAnswer = jsonQuestion["T"].toString();
     falseAnswer = jsonQuestion["F"].toString();
 }
-
+/**
+ * @brief QuestionObj::getRandomQuestionFromJsonDocument, chooses a question by random from the Json document containing questions
+ * @return question of type questionObj
+ */
 QJsonObject QuestionObj::getRandomQuestionFromJsonDocument(){
     QString pathToJsonFile = QDir().absoluteFilePath("../qt-game-project/JSON/questions.json");
     QFile file(pathToJsonFile);

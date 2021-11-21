@@ -25,6 +25,9 @@ QuestionPage::QuestionPage(QWidget *parent) : QWidget(parent)
     generateQuestion();
 }
 
+/**
+ * @brief QuestionPage::generateQuestion, generates a new question object and updates the question page accordingly
+ */
 void QuestionPage:: generateQuestion(){
     QuestionObj *question = new QuestionObj();
     questionL->clear();

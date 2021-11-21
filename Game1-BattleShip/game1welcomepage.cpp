@@ -14,6 +14,10 @@ Game1WelcomePage::Game1WelcomePage()
 
     setupScene();
 }
+
+/**
+ * @brief Game1WelcomePage::setupScene, sets up the scene for the welcome page of game 1
+ */
 void Game1WelcomePage::setupScene(){
     this->setSceneRect(0,0,1000,1000);
     this->setBackgroundBrush(QBrush(QImage(":/images/game1background.jpg")));

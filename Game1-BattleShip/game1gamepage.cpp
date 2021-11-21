@@ -148,12 +148,18 @@ Game1GamePage::Game1GamePage()
 
 }
 
+/**
+ * @brief Game1GamePage::setupScene, sets up the window of game 1 page and its background
+ */
 void Game1GamePage::setupScene(){
     this->setSceneRect(0,0,1000,1000);
     this->setBackgroundBrush(QBrush(QImage(":/images/pannel-bg.jpg")));
 
 }
 
+/**
+ * @brief Game1GamePage::setupWidgets, sets up widgets (Geometry and Appearance)
+ */
 void Game1GamePage::setupWidgets(){
     GCPLabel->setGeometry(60,200,500,80);
     GCPLabel->setAttribute(Qt::WA_NoSystemBackground);
@@ -177,6 +183,10 @@ void Game1GamePage::setupWidgets(){
     gameStatus->hide();
 }
 
+
+/**
+ * @brief Game1GamePage::setupBoats, sets up boats on the grids of player and enemy
+ */
 void Game1GamePage::setupBoats()
 {
     player1Boat1->setPixmap((QPixmap(":/images/big-boat.png")).scaled(200,50));
@@ -201,6 +211,9 @@ void Game1GamePage::setupBoats()
 
 }
 
+/**
+ * @brief Game1GamePage::setupGrids, sets up the grids of the user and the enemy.
+ */
 void Game1GamePage::setupGrids()
 {
     player1Grid->setPixmap((QPixmap(":/images/grid.png")).scaled(300,300));
@@ -210,7 +223,9 @@ void Game1GamePage::setupGrids()
     player2Grid->setPos(QPointF(600,250));
 
 }
-
+/**
+ * @brief Game1GamePage::setupButtons, set the geometry of buttons that cover the enemy's ships.
+ */
 void Game1GamePage::setupButtons(){
     button00->setGeometry(618,268,62,62);
     button01->setGeometry(686,268,62,62);
@@ -229,6 +244,9 @@ void Game1GamePage::setupButtons(){
     button32->setGeometry(753,471,62,62);
     button33->setGeometry(821,471,62,62);
 
+    /*!
+        The buttons are not clickable, the are just present  to cover the enemy ships.
+    */
     button00->setEnabled(false);
     button01->setEnabled(false);
     button02->setEnabled(false);
@@ -249,6 +267,11 @@ void Game1GamePage::setupButtons(){
     home->setGeometry(468,700,80,50);
 }
 
+/**
+ * @brief Game1GamePage::setupLabels, sets up labels above the main players boats.
+ *
+ * These labels get recoloured to red once the enemy hits one of the main player's boats.
+ */
 void Game1GamePage::setupLabels(){
     boat1Part1Label->setGeometry(118,268,62,62);
     boat1Part1Label->setStyleSheet("background-color: transparent;");
@@ -266,6 +289,9 @@ void Game1GamePage::setupLabels(){
     boat3Label->setStyleSheet("background-color: transparent;");
 }
 
+/**
+ * @brief Game1GamePage::fillScene, fills the game scene with all widgets and items.
+ */
 void Game1GamePage::fillScene()
 {
     this->addWidget(GCPLabel);
@@ -313,6 +339,11 @@ void Game1GamePage::fillScene()
     this->addWidget(home);
 }
 
+/**
+ * @brief Game1GamePage::getButtonPosition, gets position of the button that the player targets in the enemy's grid(ie. box position in the grid)
+ * @param button
+ * @return  Qvector contianing the x,y coordinates of the button targeted. In case button not in grid return vector containing -1.
+ */
 QVector<int> Game1GamePage::getButtonPosition(QPushButton *button){
     QVector<int> pos;
     for (int i=0;i<gridButtons.size();i++) {
@@ -329,6 +360,12 @@ QVector<int> Game1GamePage::getButtonPosition(QPushButton *button){
     return pos;
 }
 
+/**
+ * @brief Game1GamePage::discoverBlock, discovers if under the button lies a part of an enemy ship.
+ * @param x representing the x position.
+ * @param y representing the y position.
+ * @return true if ship found, false otherwise.
+ */
 bool Game1GamePage::discoverBlock(int x ,int y){
     if(enemyBoatPositions.at(x).at(y)){
         return true;
