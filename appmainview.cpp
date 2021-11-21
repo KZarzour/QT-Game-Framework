@@ -19,6 +19,9 @@ AppMainView::AppMainView()
     connectButtons();
 }
 
+/**
+ * @brief AppMainView::connectButtons, connects the buttons to the functions that need to be called when they are clicked.
+ */
 void AppMainView::connectButtons(){
 
     QObject::connect(signupPage->signUpB,SIGNAL(clicked(bool)),this,SLOT(openMainPage()));
@@ -34,12 +37,19 @@ void AppMainView::connectButtons(){
     QObject::connect(menuPage->game2B,SIGNAL(clicked(bool)),this,SLOT(playGame2()));
 }
 
+/**
+ * @brief AppMainView::signup, changes the page to the signup page.
+ */
 void AppMainView::signup(){
     this->hide();
     landingPage->hide();
     signupPage->clearPage();
     signupPage->show();
 }
+
+/**
+ * @brief AppMainView::openMainPage, changes the page to the main page.
+ */
 void AppMainView::openMainPage(){
     if(signupPage->activeUser!=NULL){
         signupPage->close();
@@ -62,6 +72,10 @@ void AppMainView::openMainPage(){
         this->show();
     }
 }
+
+/**
+ * @brief AppMainView::playAsGuest, changes the page to  the main page and allows player to play without an account.
+ */
 void AppMainView::playAsGuest(){
     signupPage->hide();
     landingPage->hide();
@@ -69,6 +83,10 @@ void AppMainView::playAsGuest(){
     this->setScene(menuPage);
     this->show();
 }
+
+/**
+ * @brief AppMainView::login, changes the page to the login page and clears widgets.
+ */
 void AppMainView::login(){
     signupPage->close();
     signupPage->clearPage();
@@ -78,6 +96,9 @@ void AppMainView::login(){
     landingPage->show();
 }
 
+/**
+ * @brief AppMainView::authenticateUser, on login checks if the username and password pair are correct.
+ */
 void AppMainView::authenticateUser(){
     QString username =landingPage->userNameLineEdit->text();
     QString password=landingPage->passwordLineEdit->text();
@@ -91,6 +112,9 @@ void AppMainView::authenticateUser(){
     }
 }
 
+/**
+ * @brief AppMainView::logOut, logs out the user from their account.
+ */
 void AppMainView::logOut(){
     landingPage->activeUser=NULL;
     signupPage->activeUser=NULL;
@@ -102,6 +126,9 @@ void AppMainView::logOut(){
     this->login();
 }
 
+/**
+ * @brief AppMainView::playGame1, changes page to game 1 welcome page.
+ */
 void AppMainView::playGame1(){
     game1View->activeUser = menuPage->activeUser;
 
@@ -111,6 +138,9 @@ void AppMainView::playGame1(){
     game1View->show();
 }
 
+/**
+ * @brief AppMainView::playGame2, changes page to game 2 welcome page.
+ */
 void AppMainView::playGame2(){
     game2View->activeUser = menuPage->activeUser;
 

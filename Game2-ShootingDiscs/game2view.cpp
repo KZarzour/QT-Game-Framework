@@ -21,6 +21,10 @@ Game2View::Game2View()
 
     connectButtons();
 }
+
+/**
+ * @brief Game2View::keyPressEvent, is called when the arrow keys are pressed to delete the disks and add to the score.
+ */
 void Game2View::keyPressEvent(QKeyEvent *event){
     if(event->key() == Qt::Key_F1 && (this->scene()==welcomePage)){
         this->startGame();
@@ -70,13 +74,18 @@ void Game2View::keyPressEvent(QKeyEvent *event){
     }
 }
 
-
+/**
+ * @brief Game2View::connectButtons, connects the buttons to the functions that need to be called when they are clicked.
+ */
 void Game2View::connectButtons(){
     QObject::connect(welcomePage->playGame,SIGNAL(clicked(bool)),this,SLOT(startGame()));
 
     QObject::connect(gamePage->home,SIGNAL(clicked(bool)),this,SLOT(goToHome()));
 }
 
+/**
+ * @brief Game2View::startGame, is called to start the game.
+ */
 void Game2View::startGame(){
     this->setScene(gamePage);
     if(activeUser){
@@ -88,7 +97,10 @@ void Game2View::startGame(){
     qDebug()<<"Starting";
 }
 
-
+/**
+ * @brief Game2View::goToHome, is called when home button is pressed, stops the game and takes the
+ * player back to the welcome page.
+ */
 void Game2View::goToHome(){
     gamePage->interuptGame();
     gamePage->gameResult->hide();

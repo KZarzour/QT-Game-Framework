@@ -29,13 +29,9 @@ Disk::Disk(QObject *parent, int gameSpeed) : QObject(parent)
     connect(timer,SIGNAL(timeout()),this,SLOT(update()));
     timer->start(500);
 }
-
+/**
+ * @brief Disk:: update, updates the position of a disk according to the current game speed
+ */
 void Disk:: update(){
     this->setPos(this->x(),this->y()+10*(gameSpeed+1));
-    /*
-    if(this->y()>=800){
-        scene()->removeItem(this);
-        delete this;
-    }
-    */
 }

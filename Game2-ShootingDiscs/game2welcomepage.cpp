@@ -14,6 +14,10 @@ Game2WelcomePage::Game2WelcomePage()
 
     setupScene();
 }
+
+/**
+ * @brief Game2GamePage::setupScene, sets up the welcome page instructions and widgets.
+ */
 void Game2WelcomePage::setupScene(){
     this->setSceneRect(0,0,1000,1000);
     this->setBackgroundBrush(QBrush(QImage(":/images/game1background.jpg")));
