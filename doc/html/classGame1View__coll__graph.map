@@ -1,0 +1,8 @@
+<map id="Game1View" name="Game1View">
+<area shape="rect" id="node3" href="$classQuestionPage.html" title="QuestionPage" alt="" coords="115,145,219,172"/>
+<area shape="rect" id="node10" href="$classcommandPanel.html" title="commandPanel" alt="" coords="205,95,317,121"/>
+<area shape="rect" id="node5" href="$classGame1WelcomePage.html" title="Game1WelcomePage" alt="" coords="463,196,613,223"/>
+<area shape="rect" id="node11" href="$classGame1GamePage.html" title="Game1GamePage" alt="" coords="309,196,439,223"/>
+<area shape="rect" id="node7" href="$classUser.html" title="User" alt="" coords="635,95,686,121"/>
+<area shape="rect" id="node9" href="$classJsonUtils.html" title="JsonUtils" alt="" coords="725,5,802,32"/>
+</map>

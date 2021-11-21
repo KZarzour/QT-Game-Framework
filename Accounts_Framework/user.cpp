@@ -1,4 +1,3 @@
-#include "user.h"
 /**
 * \file User.cpp
 * \brief contains definition of a User Object with all of its attributes.
@@ -6,6 +5,8 @@
 * \author Karim Zarzour
 * \author Maarouf Yassine
 */
+
+#include "user.h"
 
 User::User(QObject *parent) : QObject(parent)
 {

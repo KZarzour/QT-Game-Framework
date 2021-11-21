@@ -1,5 +1,3 @@
-#include "questionobj.h"
-
 /**
 * \file QuestionObj.cpp
 * \brief contains initialization of a question object.
@@ -7,6 +5,10 @@
 * \author Karim Zarzour
 * \author Maarouf Yassine
 */
+
+#include "questionobj.h"
+
+
 /**
  * @brief QuestionObj::QuestionObj, initializes a question object randomly
  * @param parent

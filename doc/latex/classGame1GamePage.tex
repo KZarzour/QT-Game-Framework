@@ -1,0 +1,253 @@
+\hypertarget{classGame1GamePage}{}\section{Game1\+Game\+Page Class Reference}
+\label{classGame1GamePage}\index{Game1\+Game\+Page@{Game1\+Game\+Page}}
+
+
+Inheritance diagram for Game1\+Game\+Page\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=177pt]{classGame1GamePage__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Game1\+Game\+Page\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{classGame1GamePage__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGame1GamePage_afaad60ba08c49a7aec3aef5fadb6588c}\label{classGame1GamePage_afaad60ba08c49a7aec3aef5fadb6588c}} 
+void \hyperlink{classGame1GamePage_afaad60ba08c49a7aec3aef5fadb6588c}{setup\+Scene} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classGame1GamePage_afaad60ba08c49a7aec3aef5fadb6588c}{Game1\+Game\+Page\+::setup\+Scene}, sets up the window of game 1 page and its background. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame1GamePage_a7883c5c3eb225ee14e662b8fb73bca69}\label{classGame1GamePage_a7883c5c3eb225ee14e662b8fb73bca69}} 
+void \hyperlink{classGame1GamePage_a7883c5c3eb225ee14e662b8fb73bca69}{setup\+Grids} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classGame1GamePage_a7883c5c3eb225ee14e662b8fb73bca69}{Game1\+Game\+Page\+::setup\+Grids}, sets up the grids of the user and the enemy. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame1GamePage_aa03791d5d0134726886da82236e1fd55}\label{classGame1GamePage_aa03791d5d0134726886da82236e1fd55}} 
+void \hyperlink{classGame1GamePage_aa03791d5d0134726886da82236e1fd55}{fill\+Scene} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classGame1GamePage_aa03791d5d0134726886da82236e1fd55}{Game1\+Game\+Page\+::fill\+Scene}, fills the game scene with all widgets and items. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame1GamePage_ac96dac26541e8e4cffa130d4ceea5117}\label{classGame1GamePage_ac96dac26541e8e4cffa130d4ceea5117}} 
+void \hyperlink{classGame1GamePage_ac96dac26541e8e4cffa130d4ceea5117}{setup\+Boats} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classGame1GamePage_ac96dac26541e8e4cffa130d4ceea5117}{Game1\+Game\+Page\+::setup\+Boats}, sets up boats on the grids of player and enemy. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame1GamePage_a23606106eb189fdbe197c77d717b845c}\label{classGame1GamePage_a23606106eb189fdbe197c77d717b845c}} 
+void \hyperlink{classGame1GamePage_a23606106eb189fdbe197c77d717b845c}{setup\+Widgets} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classGame1GamePage_a23606106eb189fdbe197c77d717b845c}{Game1\+Game\+Page\+::setup\+Widgets}, sets up widgets (Geometry and Appearance) \end{DoxyCompactList}\item 
+void \hyperlink{classGame1GamePage_a071eb05d04c53abb1f82fe66ad656040}{setup\+Labels} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classGame1GamePage_a071eb05d04c53abb1f82fe66ad656040}{Game1\+Game\+Page\+::setup\+Labels}, sets up labels above the main players boats. \end{DoxyCompactList}\item 
+void \hyperlink{classGame1GamePage_a55c34bef7d0cb08a617aba01ad556c8c}{setup\+Buttons} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classGame1GamePage_a55c34bef7d0cb08a617aba01ad556c8c}{Game1\+Game\+Page\+::setup\+Buttons}, set the geometry of buttons that cover the enemy\textquotesingle{}s ships. \end{DoxyCompactList}\item 
+Q\+Vector$<$ int $>$ \hyperlink{classGame1GamePage_a47232d81c8e7f96bbf70a16821f86157}{get\+Button\+Position} (Q\+Push\+Button $\ast$button)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classGame1GamePage_a47232d81c8e7f96bbf70a16821f86157}{Game1\+Game\+Page\+::get\+Button\+Position}, gets position of the button that the player targets in the enemy\textquotesingle{}s grid(ie. box position in the grid) \end{DoxyCompactList}\item 
+bool \hyperlink{classGame1GamePage_aa70f99c3dafab2856e116f1c37efe4e8}{discover\+Block} (int x, int y)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classGame1GamePage_aa70f99c3dafab2856e116f1c37efe4e8}{Game1\+Game\+Page\+::discover\+Block}, discovers if under the button lies a part of an enemy ship. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGame1GamePage_a85b13ae56a27f03ffc1f60b51243a1cb}\label{classGame1GamePage_a85b13ae56a27f03ffc1f60b51243a1cb}} 
+Q\+Graphics\+Pixmap\+Item $\ast$ {\bfseries player1\+Grid}
+\item 
+\mbox{\Hypertarget{classGame1GamePage_ab2d197eab54acc168da97c35a5603590}\label{classGame1GamePage_ab2d197eab54acc168da97c35a5603590}} 
+Q\+Graphics\+Pixmap\+Item $\ast$ {\bfseries player2\+Grid}
+\item 
+\mbox{\Hypertarget{classGame1GamePage_a749a0f5522a38097547336f9b3afd659}\label{classGame1GamePage_a749a0f5522a38097547336f9b3afd659}} 
+Q\+Graphics\+Pixmap\+Item $\ast$ {\bfseries player1\+Boat1}
+\item 
+\mbox{\Hypertarget{classGame1GamePage_aab142c481a999905443a2099ee13cc85}\label{classGame1GamePage_aab142c481a999905443a2099ee13cc85}} 
+Q\+Graphics\+Pixmap\+Item $\ast$ {\bfseries player1\+Boat2}
+\item 
+\mbox{\Hypertarget{classGame1GamePage_ac04a574400767f267a165a807d445c6b}\label{classGame1GamePage_ac04a574400767f267a165a807d445c6b}} 
+Q\+Graphics\+Pixmap\+Item $\ast$ {\bfseries player1\+Boat3}
+\item 
+\mbox{\Hypertarget{classGame1GamePage_a4d6da6ae1523c45e4b50426f5f26b2de}\label{classGame1GamePage_a4d6da6ae1523c45e4b50426f5f26b2de}} 
+Q\+Graphics\+Pixmap\+Item $\ast$ {\bfseries player2\+Boat1}
+\item 
+\mbox{\Hypertarget{classGame1GamePage_aa8ae0f2b64f18151ad26d897d2c9601e}\label{classGame1GamePage_aa8ae0f2b64f18151ad26d897d2c9601e}} 
+Q\+Graphics\+Pixmap\+Item $\ast$ {\bfseries player2\+Boat2}
+\item 
+\mbox{\Hypertarget{classGame1GamePage_ab21a2665749eabb61121742550caa038}\label{classGame1GamePage_ab21a2665749eabb61121742550caa038}} 
+Q\+Graphics\+Pixmap\+Item $\ast$ {\bfseries player2\+Boat3}
+\item 
+\mbox{\Hypertarget{classGame1GamePage_ae54a83518f95a02ab218198a6b45a6d2}\label{classGame1GamePage_ae54a83518f95a02ab218198a6b45a6d2}} 
+Q\+Graphics\+Pixmap\+Item $\ast$ {\bfseries player2\+Boat4}
+\item 
+\mbox{\Hypertarget{classGame1GamePage_a3518354f4ea9e7f8ee3b59b0cee3faed}\label{classGame1GamePage_a3518354f4ea9e7f8ee3b59b0cee3faed}} 
+Q\+Graphics\+Pixmap\+Item $\ast$ {\bfseries player2\+Boat5}
+\item 
+\mbox{\Hypertarget{classGame1GamePage_a54fc09dfc5e07a30650a70b56ea03b13}\label{classGame1GamePage_a54fc09dfc5e07a30650a70b56ea03b13}} 
+Q\+Graphics\+Pixmap\+Item $\ast$ {\bfseries player2\+Boat6}
+\item 
+\mbox{\Hypertarget{classGame1GamePage_a7d49025fb26d96a30bf57dd3d0df4591}\label{classGame1GamePage_a7d49025fb26d96a30bf57dd3d0df4591}} 
+\hyperlink{classcommandPanel}{command\+Panel} $\ast$ {\bfseries player\+Command\+Panel}
+\item 
+\mbox{\Hypertarget{classGame1GamePage_ae8b91ab81442125ecb68f53c75ad33d7}\label{classGame1GamePage_ae8b91ab81442125ecb68f53c75ad33d7}} 
+Q\+Label $\ast$ {\bfseries G\+C\+P\+Label}
+\item 
+\mbox{\Hypertarget{classGame1GamePage_af2a336703f379f45151221a66b5cbe21}\label{classGame1GamePage_af2a336703f379f45151221a66b5cbe21}} 
+Q\+Label $\ast$ {\bfseries B\+C\+P\+Label}
+\item 
+\mbox{\Hypertarget{classGame1GamePage_aba0851ff24c3db694ae5200c3739a465}\label{classGame1GamePage_aba0851ff24c3db694ae5200c3739a465}} 
+Q\+Label $\ast$ {\bfseries correct\+Answer\+No}
+\item 
+\mbox{\Hypertarget{classGame1GamePage_ab55f7f14e0d8c73a24b7edafd59b90d7}\label{classGame1GamePage_ab55f7f14e0d8c73a24b7edafd59b90d7}} 
+Q\+Label $\ast$ {\bfseries incorrect\+Answer\+No}
+\item 
+\mbox{\Hypertarget{classGame1GamePage_af412a77fccdebe1d0a4f07699174f08c}\label{classGame1GamePage_af412a77fccdebe1d0a4f07699174f08c}} 
+Q\+Label $\ast$ {\bfseries game\+Status}
+\item 
+\mbox{\Hypertarget{classGame1GamePage_acfa716f34e6b3fa19392a69e9022af35}\label{classGame1GamePage_acfa716f34e6b3fa19392a69e9022af35}} 
+Q\+Push\+Button $\ast$ {\bfseries button00}
+\item 
+\mbox{\Hypertarget{classGame1GamePage_a11bcc55eacd28fe6117994114e8c8134}\label{classGame1GamePage_a11bcc55eacd28fe6117994114e8c8134}} 
+Q\+Push\+Button $\ast$ {\bfseries button01}
+\item 
+\mbox{\Hypertarget{classGame1GamePage_a4d1752207e24d7413bc516202c48e2c4}\label{classGame1GamePage_a4d1752207e24d7413bc516202c48e2c4}} 
+Q\+Push\+Button $\ast$ {\bfseries button02}
+\item 
+\mbox{\Hypertarget{classGame1GamePage_ae40d26d7fb7cebf2984588d87ec63841}\label{classGame1GamePage_ae40d26d7fb7cebf2984588d87ec63841}} 
+Q\+Push\+Button $\ast$ {\bfseries button03}
+\item 
+\mbox{\Hypertarget{classGame1GamePage_a58e1b7725a4afacaf0e054827cb0a36c}\label{classGame1GamePage_a58e1b7725a4afacaf0e054827cb0a36c}} 
+Q\+Push\+Button $\ast$ {\bfseries button10}
+\item 
+\mbox{\Hypertarget{classGame1GamePage_a61f6ebba2ceb6a57c8d044bfc65db125}\label{classGame1GamePage_a61f6ebba2ceb6a57c8d044bfc65db125}} 
+Q\+Push\+Button $\ast$ {\bfseries button11}
+\item 
+\mbox{\Hypertarget{classGame1GamePage_a47d69a0222596117d101eb5c33acc1fd}\label{classGame1GamePage_a47d69a0222596117d101eb5c33acc1fd}} 
+Q\+Push\+Button $\ast$ {\bfseries button12}
+\item 
+\mbox{\Hypertarget{classGame1GamePage_a0166c20f94a4d1a3e41e566ed1e68379}\label{classGame1GamePage_a0166c20f94a4d1a3e41e566ed1e68379}} 
+Q\+Push\+Button $\ast$ {\bfseries button13}
+\item 
+\mbox{\Hypertarget{classGame1GamePage_a844db9ee5ad34b0ad90363781224b7f6}\label{classGame1GamePage_a844db9ee5ad34b0ad90363781224b7f6}} 
+Q\+Push\+Button $\ast$ {\bfseries button20}
+\item 
+\mbox{\Hypertarget{classGame1GamePage_a98f90a0aed02ba916679ed4cfeb56666}\label{classGame1GamePage_a98f90a0aed02ba916679ed4cfeb56666}} 
+Q\+Push\+Button $\ast$ {\bfseries button21}
+\item 
+\mbox{\Hypertarget{classGame1GamePage_a009b058320a7f09445a238ec843b56f0}\label{classGame1GamePage_a009b058320a7f09445a238ec843b56f0}} 
+Q\+Push\+Button $\ast$ {\bfseries button22}
+\item 
+\mbox{\Hypertarget{classGame1GamePage_afba915558c68516883c70ce0162948fd}\label{classGame1GamePage_afba915558c68516883c70ce0162948fd}} 
+Q\+Push\+Button $\ast$ {\bfseries button23}
+\item 
+\mbox{\Hypertarget{classGame1GamePage_a7e3cae8c9a7af349f909d2d793c07241}\label{classGame1GamePage_a7e3cae8c9a7af349f909d2d793c07241}} 
+Q\+Push\+Button $\ast$ {\bfseries button30}
+\item 
+\mbox{\Hypertarget{classGame1GamePage_a2d98ecb78b9d0750a9de9d220404e644}\label{classGame1GamePage_a2d98ecb78b9d0750a9de9d220404e644}} 
+Q\+Push\+Button $\ast$ {\bfseries button31}
+\item 
+\mbox{\Hypertarget{classGame1GamePage_a611314e83752c0045ddaeb4bf975c69d}\label{classGame1GamePage_a611314e83752c0045ddaeb4bf975c69d}} 
+Q\+Push\+Button $\ast$ {\bfseries button32}
+\item 
+\mbox{\Hypertarget{classGame1GamePage_acdae6626152d3a4862a6d29f1442c658}\label{classGame1GamePage_acdae6626152d3a4862a6d29f1442c658}} 
+Q\+Push\+Button $\ast$ {\bfseries button33}
+\item 
+\mbox{\Hypertarget{classGame1GamePage_a2b2c1855a0da027deec667c11fb7ec4e}\label{classGame1GamePage_a2b2c1855a0da027deec667c11fb7ec4e}} 
+Q\+Label $\ast$ {\bfseries boat1\+Part1\+Label}
+\item 
+\mbox{\Hypertarget{classGame1GamePage_abee94a06eb70b1d56f275a827a3ea8c1}\label{classGame1GamePage_abee94a06eb70b1d56f275a827a3ea8c1}} 
+Q\+Label $\ast$ {\bfseries boat1\+Part2\+Label}
+\item 
+\mbox{\Hypertarget{classGame1GamePage_ab7a34c4aeb0dcee242f7552bfe365c0e}\label{classGame1GamePage_ab7a34c4aeb0dcee242f7552bfe365c0e}} 
+Q\+Label $\ast$ {\bfseries boat1\+Part3\+Label}
+\item 
+\mbox{\Hypertarget{classGame1GamePage_add9cc20ff675a3af2214434ade38e812}\label{classGame1GamePage_add9cc20ff675a3af2214434ade38e812}} 
+Q\+Label $\ast$ {\bfseries boat2\+Label}
+\item 
+\mbox{\Hypertarget{classGame1GamePage_a24c75dff3dfec462f172896e2044d971}\label{classGame1GamePage_a24c75dff3dfec462f172896e2044d971}} 
+Q\+Label $\ast$ {\bfseries boat3\+Label}
+\item 
+\mbox{\Hypertarget{classGame1GamePage_a62f04a32d802bbe089451d469fe77f25}\label{classGame1GamePage_a62f04a32d802bbe089451d469fe77f25}} 
+int {\bfseries bad\+Answers}
+\item 
+\mbox{\Hypertarget{classGame1GamePage_ad70ff23f6015867d84e69e432aaffac7}\label{classGame1GamePage_ad70ff23f6015867d84e69e432aaffac7}} 
+Q\+Vector$<$ Q\+Vector$<$ Q\+Push\+Button $\ast$ $>$ $>$ {\bfseries grid\+Buttons}
+\item 
+\mbox{\Hypertarget{classGame1GamePage_a61d460be2f955377e656d7bfbf58aec1}\label{classGame1GamePage_a61d460be2f955377e656d7bfbf58aec1}} 
+Q\+Vector$<$ Q\+Vector$<$ bool $>$ $>$ {\bfseries user\+Boat\+Positions}
+\item 
+\mbox{\Hypertarget{classGame1GamePage_a4fb0a4e7d44b86217db2775ae38b0c88}\label{classGame1GamePage_a4fb0a4e7d44b86217db2775ae38b0c88}} 
+Q\+Vector$<$ Q\+Vector$<$ bool $>$ $>$ {\bfseries enemy\+Boat\+Positions}
+\item 
+\mbox{\Hypertarget{classGame1GamePage_a59e7ce71a4b0672fb49e6cdf927baac4}\label{classGame1GamePage_a59e7ce71a4b0672fb49e6cdf927baac4}} 
+Q\+String {\bfseries last\+Box\+Chosen}
+\item 
+\mbox{\Hypertarget{classGame1GamePage_ac2a5bcec1e786a3ce95dff0ce2c0a8a3}\label{classGame1GamePage_ac2a5bcec1e786a3ce95dff0ce2c0a8a3}} 
+Q\+Push\+Button $\ast$ {\bfseries home}
+\item 
+\mbox{\Hypertarget{classGame1GamePage_afa6f1549edcf760257511c2e14862e6b}\label{classGame1GamePage_afa6f1549edcf760257511c2e14862e6b}} 
+bool {\bfseries end\+Game} = false
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classGame1GamePage_aa70f99c3dafab2856e116f1c37efe4e8}\label{classGame1GamePage_aa70f99c3dafab2856e116f1c37efe4e8}} 
+\index{Game1\+Game\+Page@{Game1\+Game\+Page}!discover\+Block@{discover\+Block}}
+\index{discover\+Block@{discover\+Block}!Game1\+Game\+Page@{Game1\+Game\+Page}}
+\subsubsection{\texorpdfstring{discover\+Block()}{discoverBlock()}}
+{\footnotesize\ttfamily bool Game1\+Game\+Page\+::discover\+Block (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{classGame1GamePage_aa70f99c3dafab2856e116f1c37efe4e8}{Game1\+Game\+Page\+::discover\+Block}, discovers if under the button lies a part of an enemy ship. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & representing the x position. \\
+\hline
+{\em y} & representing the y position. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if ship found, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGame1GamePage_a47232d81c8e7f96bbf70a16821f86157}\label{classGame1GamePage_a47232d81c8e7f96bbf70a16821f86157}} 
+\index{Game1\+Game\+Page@{Game1\+Game\+Page}!get\+Button\+Position@{get\+Button\+Position}}
+\index{get\+Button\+Position@{get\+Button\+Position}!Game1\+Game\+Page@{Game1\+Game\+Page}}
+\subsubsection{\texorpdfstring{get\+Button\+Position()}{getButtonPosition()}}
+{\footnotesize\ttfamily Q\+Vector$<$ int $>$ Game1\+Game\+Page\+::get\+Button\+Position (\begin{DoxyParamCaption}\item[{Q\+Push\+Button $\ast$}]{button }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{classGame1GamePage_a47232d81c8e7f96bbf70a16821f86157}{Game1\+Game\+Page\+::get\+Button\+Position}, gets position of the button that the player targets in the enemy\textquotesingle{}s grid(ie. box position in the grid) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em button} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Qvector contianing the x,y coordinates of the button targeted. In case button not in grid return vector containing -\/1. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGame1GamePage_a55c34bef7d0cb08a617aba01ad556c8c}\label{classGame1GamePage_a55c34bef7d0cb08a617aba01ad556c8c}} 
+\index{Game1\+Game\+Page@{Game1\+Game\+Page}!setup\+Buttons@{setup\+Buttons}}
+\index{setup\+Buttons@{setup\+Buttons}!Game1\+Game\+Page@{Game1\+Game\+Page}}
+\subsubsection{\texorpdfstring{setup\+Buttons()}{setupButtons()}}
+{\footnotesize\ttfamily void Game1\+Game\+Page\+::setup\+Buttons (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{classGame1GamePage_a55c34bef7d0cb08a617aba01ad556c8c}{Game1\+Game\+Page\+::setup\+Buttons}, set the geometry of buttons that cover the enemy\textquotesingle{}s ships. 
+
+The buttons are not clickable, the are just present to cover the enemy ships.\mbox{\Hypertarget{classGame1GamePage_a071eb05d04c53abb1f82fe66ad656040}\label{classGame1GamePage_a071eb05d04c53abb1f82fe66ad656040}} 
+\index{Game1\+Game\+Page@{Game1\+Game\+Page}!setup\+Labels@{setup\+Labels}}
+\index{setup\+Labels@{setup\+Labels}!Game1\+Game\+Page@{Game1\+Game\+Page}}
+\subsubsection{\texorpdfstring{setup\+Labels()}{setupLabels()}}
+{\footnotesize\ttfamily void Game1\+Game\+Page\+::setup\+Labels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{classGame1GamePage_a071eb05d04c53abb1f82fe66ad656040}{Game1\+Game\+Page\+::setup\+Labels}, sets up labels above the main players boats. 
+
+These labels get recoloured to red once the enemy hits one of the main player\textquotesingle{}s boats. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Game1-\/\+Battle\+Ship/game1gamepage.\+h\item 
+Game1-\/\+Battle\+Ship/game1gamepage.\+cpp\end{DoxyCompactItemize}

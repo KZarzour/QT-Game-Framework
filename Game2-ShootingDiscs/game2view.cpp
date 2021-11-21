@@ -1,4 +1,3 @@
-#include "game2view.h"
 /**
 * \file Game2View.cpp
 * \brief contains initialization of game 2 view.
@@ -6,6 +5,9 @@
 * \author Karim Zarzour
 * \author Maarouf Yassine
 */
+
+#include "game2view.h"
+
 Game2View::Game2View()
 {
     activeUser = new User();

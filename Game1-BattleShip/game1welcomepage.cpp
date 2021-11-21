@@ -1,4 +1,3 @@
-#include "game1welcomepage.h"
 /**
 * \file Game1WelcomePage.cpp
 * \brief contains initialization of welcome page of game 1. (Instructions + Start Button)
@@ -6,6 +5,9 @@
 * \author Karim Zarzour
 * \author Maarouf Yassine
 */
+
+#include "game1welcomepage.h"
+
 Game1WelcomePage::Game1WelcomePage()
 {
     gameInsructions = new QLabel();

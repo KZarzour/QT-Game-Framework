@@ -1,4 +1,3 @@
-#include "game2gamepage.h"
 /**
 * \file Game2GamePage.cpp
 * \brief contains initialization of game 2 page.
@@ -6,6 +5,10 @@
 * \author Karim Zarzour
 * \author Maarouf Yassine
 */
+
+
+#include "game2gamepage.h"
+
 Game2GamePage::Game2GamePage()
 {
     jsonUtils =new JsonUtils();

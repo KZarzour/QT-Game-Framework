@@ -1,0 +1,173 @@
+\hypertarget{classUser}{}\section{User Class Reference}
+\label{classUser}\index{User@{User}}
+
+
+Inheritance diagram for User\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=133pt]{classUser__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for User\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{classUser__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classUser_ae90821c4c8cc9a5a370f0ad6157adcc1}\label{classUser_ae90821c4c8cc9a5a370f0ad6157adcc1}} 
+{\bfseries User} (Q\+Object $\ast$parent=nullptr)
+\item 
+\hyperlink{classUser_a78cce0bf7baacf9dcc0ecba524f67b87}{User} (Q\+Json\+Object user)
+\item 
+bool \hyperlink{classUser_a9e1fe4ac5c94a98f82ca09fa0982e029}{is\+Unique} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classUser_a9e1fe4ac5c94a98f82ca09fa0982e029}{User\+::is\+Unique}, Checks whether a \hyperlink{classUser}{User} is unique or not. \end{DoxyCompactList}\item 
+bool \hyperlink{classUser_a7fff50444765760051f4ae6fb3d58e16}{is\+Valid} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classUser_a7fff50444765760051f4ae6fb3d58e16}{User\+::is\+Valid}, Checks whether \hyperlink{classUser}{User}\textquotesingle{}s input is valid. \end{DoxyCompactList}\item 
+Q\+Json\+Object \hyperlink{classUser_a2edd9754d400f097b4aa88bc087ace8b}{user\+To\+Json} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classUser_a2edd9754d400f097b4aa88bc087ace8b}{User\+::user\+To\+Json}, Transforms a \hyperlink{classUser}{User} to a Q\+Json\+Object. \end{DoxyCompactList}\item 
+Q\+Json\+Array \hyperlink{classUser_af14a1fba45613d9586d8951f13f9c4a0}{scores\+As\+Json\+Array} (Q\+Vector$<$ int $>$ \&scores)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classUser_af14a1fba45613d9586d8951f13f9c4a0}{User\+::scores\+As\+Json\+Array}, Transforms a vector of scores to Q\+Json\+Array. \end{DoxyCompactList}\item 
+Q\+String \hyperlink{classUser_ac57cd256ecaaaaabc2475647902740ba}{find\+Corresponding\+Flag} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classUser_ac57cd256ecaaaaabc2475647902740ba}{User\+::find\+Corresponding\+Flag}, finds users corresponding flag from phone number. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classUser_af691f29bfbfaecdb752ccdf762f5d037}\label{classUser_af691f29bfbfaecdb752ccdf762f5d037}} 
+\hyperlink{classJsonUtils}{Json\+Utils} {\bfseries json}
+\item 
+\mbox{\Hypertarget{classUser_ae4202de2b7974e92a55b913d20b03833}\label{classUser_ae4202de2b7974e92a55b913d20b03833}} 
+Q\+String {\bfseries username}
+\item 
+\mbox{\Hypertarget{classUser_ac887622f22a898c097d156ad964be846}\label{classUser_ac887622f22a898c097d156ad964be846}} 
+Q\+String {\bfseries password}
+\item 
+\mbox{\Hypertarget{classUser_aed78465b35175ff33ab3ca3ca1ebe450}\label{classUser_aed78465b35175ff33ab3ca3ca1ebe450}} 
+Q\+String {\bfseries first\+Name}
+\item 
+\mbox{\Hypertarget{classUser_a3a225093bbb405dab285e74e24cef7c5}\label{classUser_a3a225093bbb405dab285e74e24cef7c5}} 
+Q\+String {\bfseries last\+Name}
+\item 
+\mbox{\Hypertarget{classUser_a7674a8234cb3ac9ad27866181c34f3a3}\label{classUser_a7674a8234cb3ac9ad27866181c34f3a3}} 
+Q\+String {\bfseries dob}
+\item 
+\mbox{\Hypertarget{classUser_ae7cf3e04e6aba46f20af4c6802630074}\label{classUser_ae7cf3e04e6aba46f20af4c6802630074}} 
+Q\+String {\bfseries gender}
+\item 
+\mbox{\Hypertarget{classUser_a015d9cec85964df084486386bc6bd9d4}\label{classUser_a015d9cec85964df084486386bc6bd9d4}} 
+Q\+String {\bfseries phonenumber}
+\item 
+\mbox{\Hypertarget{classUser_a5723ab5a77c21e173453505b9af4597f}\label{classUser_a5723ab5a77c21e173453505b9af4597f}} 
+Q\+Json\+Value {\bfseries profile\+Picture}
+\item 
+\mbox{\Hypertarget{classUser_a7f4dadaaea03ff00240d7bd3d2e8a8fd}\label{classUser_a7f4dadaaea03ff00240d7bd3d2e8a8fd}} 
+int {\bfseries game1\+High\+Score} =0
+\item 
+\mbox{\Hypertarget{classUser_a4ad78a4dd8e01f69618b510cf5d32cea}\label{classUser_a4ad78a4dd8e01f69618b510cf5d32cea}} 
+int {\bfseries game2\+High\+Score} =0
+\item 
+\mbox{\Hypertarget{classUser_a521511071f8d3d804f089a0c6788780a}\label{classUser_a521511071f8d3d804f089a0c6788780a}} 
+Q\+Vector$<$ int $>$ {\bfseries game1\+Scores} =\{\}
+\item 
+\mbox{\Hypertarget{classUser_a23644b80da955e4ca44a0f74b0b4b11e}\label{classUser_a23644b80da955e4ca44a0f74b0b4b11e}} 
+Q\+Vector$<$ int $>$ {\bfseries game2\+Scores} =\{\}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classUser_a78cce0bf7baacf9dcc0ecba524f67b87}\label{classUser_a78cce0bf7baacf9dcc0ecba524f67b87}} 
+\index{User@{User}!User@{User}}
+\index{User@{User}!User@{User}}
+\subsubsection{\texorpdfstring{User()}{User()}}
+{\footnotesize\ttfamily User\+::\+User (\begin{DoxyParamCaption}\item[{Q\+Json\+Object}]{user }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Gets the \hyperlink{classUser}{User} from a Q\+Json\+Object \begin{DoxyReturn}{Returns}
+a user from the users.\+json 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classUser_ac57cd256ecaaaaabc2475647902740ba}\label{classUser_ac57cd256ecaaaaabc2475647902740ba}} 
+\index{User@{User}!find\+Corresponding\+Flag@{find\+Corresponding\+Flag}}
+\index{find\+Corresponding\+Flag@{find\+Corresponding\+Flag}!User@{User}}
+\subsubsection{\texorpdfstring{find\+Corresponding\+Flag()}{findCorrespondingFlag()}}
+{\footnotesize\ttfamily Q\+String User\+::find\+Corresponding\+Flag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{classUser_ac57cd256ecaaaaabc2475647902740ba}{User\+::find\+Corresponding\+Flag}, finds users corresponding flag from phone number. 
+
+\begin{DoxyReturn}{Returns}
+encoded flag image 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUser_a9e1fe4ac5c94a98f82ca09fa0982e029}\label{classUser_a9e1fe4ac5c94a98f82ca09fa0982e029}} 
+\index{User@{User}!is\+Unique@{is\+Unique}}
+\index{is\+Unique@{is\+Unique}!User@{User}}
+\subsubsection{\texorpdfstring{is\+Unique()}{isUnique()}}
+{\footnotesize\ttfamily bool User\+::is\+Unique (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{classUser_a9e1fe4ac5c94a98f82ca09fa0982e029}{User\+::is\+Unique}, Checks whether a \hyperlink{classUser}{User} is unique or not. 
+
+\begin{DoxyReturn}{Returns}
+True if unique, False otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUser_a7fff50444765760051f4ae6fb3d58e16}\label{classUser_a7fff50444765760051f4ae6fb3d58e16}} 
+\index{User@{User}!is\+Valid@{is\+Valid}}
+\index{is\+Valid@{is\+Valid}!User@{User}}
+\subsubsection{\texorpdfstring{is\+Valid()}{isValid()}}
+{\footnotesize\ttfamily bool User\+::is\+Valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{classUser_a7fff50444765760051f4ae6fb3d58e16}{User\+::is\+Valid}, Checks whether \hyperlink{classUser}{User}\textquotesingle{}s input is valid. 
+
+\begin{DoxyReturn}{Returns}
+true if valid, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUser_af14a1fba45613d9586d8951f13f9c4a0}\label{classUser_af14a1fba45613d9586d8951f13f9c4a0}} 
+\index{User@{User}!scores\+As\+Json\+Array@{scores\+As\+Json\+Array}}
+\index{scores\+As\+Json\+Array@{scores\+As\+Json\+Array}!User@{User}}
+\subsubsection{\texorpdfstring{scores\+As\+Json\+Array()}{scoresAsJsonArray()}}
+{\footnotesize\ttfamily Q\+Json\+Array User\+::scores\+As\+Json\+Array (\begin{DoxyParamCaption}\item[{Q\+Vector$<$ int $>$ \&}]{scores }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{classUser_af14a1fba45613d9586d8951f13f9c4a0}{User\+::scores\+As\+Json\+Array}, Transforms a vector of scores to Q\+Json\+Array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scores} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Q\+Json\+Array of scores 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUser_a2edd9754d400f097b4aa88bc087ace8b}\label{classUser_a2edd9754d400f097b4aa88bc087ace8b}} 
+\index{User@{User}!user\+To\+Json@{user\+To\+Json}}
+\index{user\+To\+Json@{user\+To\+Json}!User@{User}}
+\subsubsection{\texorpdfstring{user\+To\+Json()}{userToJson()}}
+{\footnotesize\ttfamily Q\+Json\+Object User\+::user\+To\+Json (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{classUser_a2edd9754d400f097b4aa88bc087ace8b}{User\+::user\+To\+Json}, Transforms a \hyperlink{classUser}{User} to a Q\+Json\+Object. 
+
+\begin{DoxyReturn}{Returns}
+Corresponding Q\+Json\+Object 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Accounts\+\_\+\+Framework/user.\+h\item 
+Accounts\+\_\+\+Framework/user.\+cpp\end{DoxyCompactItemize}

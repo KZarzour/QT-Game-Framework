@@ -1,5 +1,3 @@
-#include "jsonutils.h"
-
 /**
 * \file JsonUtils.cpp
 * \brief contains Json Utilities needed to access and modify Json files
@@ -7,6 +5,8 @@
 * \author Karim Zarzour
 * \author Maarouf Yassine
 */
+
+#include "jsonutils.h"
 
 JsonUtils::JsonUtils()
 {

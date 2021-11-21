@@ -1,5 +1,3 @@
-#include "mainpage.h"
-
 /**
 * \file mainPage.cpp
 * \brief contains initialization of main menu page that is used to access and the games.
@@ -7,6 +5,10 @@
 * \author Karim Zarzour
 * \author Maarouf Yassine
 */
+
+
+
+#include "mainpage.h"
 
 mainPage::mainPage(QObject *parent) : QGraphicsScene(parent)
 {

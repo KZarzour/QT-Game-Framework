@@ -1,0 +1,7 @@
+<map id="Game2GamePage" name="Game2GamePage">
+<area shape="rect" id="node3" href="$classLowerPanelButton.html" title="LowerPanelButton" alt="" coords="405,95,533,121"/>
+<area shape="rect" id="node6" href="$classUser.html" title="User" alt="" coords="255,95,306,121"/>
+<area shape="rect" id="node8" href="$classDisk.html" title="Disk" alt="" coords="331,95,380,121"/>
+<area shape="rect" id="node9" href="$classmissedDiskZone.html" title="missedDiskZone" alt="" coords="557,95,677,121"/>
+<area shape="rect" id="node7" href="$classJsonUtils.html" title="JsonUtils" alt="" coords="182,5,259,32"/>
+</map>

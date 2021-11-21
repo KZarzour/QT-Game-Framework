@@ -1,4 +1,3 @@
-#include "game2welcomepage.h"
 /**
 * \file JsonUtils.cpp
 * \brief contains initialization of game 2 welcome page.
@@ -6,6 +5,9 @@
 * \author Karim Zarzour
 * \author Maarouf Yassine
 */
+
+#include "game2welcomepage.h"
+
 Game2WelcomePage::Game2WelcomePage()
 {
     gameInsructions = new QLabel();

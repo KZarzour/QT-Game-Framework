@@ -1,4 +1,3 @@
-#include "lowerpanelbutton.h"
 /**
 * \file JsonUtils.cpp
 * \brief contains initialization of the object representing lower panel buttons in the game.
@@ -6,6 +5,9 @@
 * \author Karim Zarzour
 * \author Maarouf Yassine
 */
+
+#include "lowerpanelbutton.h"
+
 LowerPanelButton::LowerPanelButton(QObject *parent, int type) : QObject(parent)
 {
     this->type = type;

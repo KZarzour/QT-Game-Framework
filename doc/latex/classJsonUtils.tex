@@ -1,0 +1,137 @@
+\hypertarget{classJsonUtils}{}\section{Json\+Utils Class Reference}
+\label{classJsonUtils}\index{Json\+Utils@{Json\+Utils}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classJsonUtils_a9626b00d2b338602731abac985a77063}{add\+User\+To\+Json} (Q\+Json\+Object user)
+\begin{DoxyCompactList}\small\item\em Takes a newly created user and appends it to the users.\+json document. \end{DoxyCompactList}\item 
+void \hyperlink{classJsonUtils_aa59b55bcdf1b0a9ab2726d1da6cf9eb8}{update\+Scores} (Q\+String username, Q\+Vector$<$ int $>$ scores, int highscore, int game\+Identifier)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classJsonUtils_aa59b55bcdf1b0a9ab2726d1da6cf9eb8}{Json\+Utils\+::update\+Scores}, Update the \hyperlink{classUser}{User} Scores in the Json object of the \hyperlink{classUser}{User}. \end{DoxyCompactList}\item 
+Q\+Json\+Document \hyperlink{classJsonUtils_a119512273e8b9dc8ea46e88811479705}{get\+Json\+Document} ()
+\begin{DoxyCompactList}\small\item\em Gets the Json\+Document of the file path. \end{DoxyCompactList}\item 
+Q\+Json\+Object \hyperlink{classJsonUtils_ae71b2b3eeaf9d1d0a7dce02cec7684ea}{validate\+User} (Q\+String \&username, Q\+String \&password)
+\begin{DoxyCompactList}\small\item\em Checks if a user who attempted to login has already signed up before. \end{DoxyCompactList}\item 
+Q\+Json\+Value \hyperlink{classJsonUtils_ae1a169f74290c719847414f70d2cf970}{encode\+Profile\+Picture} (Q\+Pixmap \&p)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classJsonUtils_ae1a169f74290c719847414f70d2cf970}{Json\+Utils\+::encode\+Profile\+Picture}, Takes a picture, encodes it, and returns the corresponding hashed Q\+Json\+Value. \end{DoxyCompactList}\item 
+Q\+Pixmap \hyperlink{classJsonUtils_aec5239b893c527428ed31a7ba05eba97}{decode\+Profile\+Picture} (Q\+Json\+Value pic)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classJsonUtils_aec5239b893c527428ed31a7ba05eba97}{Json\+Utils\+::decode\+Profile\+Picture}, Takes a Q\+Json\+Value corresponding to a picture, decodes it, and returns the corresponding Q\+Pixmap. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classJsonUtils_a62ef956f6d79a2935be9fe199fc285b5}\label{classJsonUtils_a62ef956f6d79a2935be9fe199fc285b5}} 
+Q\+String {\bfseries path\+To\+Json\+File}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classJsonUtils_a9626b00d2b338602731abac985a77063}\label{classJsonUtils_a9626b00d2b338602731abac985a77063}} 
+\index{Json\+Utils@{Json\+Utils}!add\+User\+To\+Json@{add\+User\+To\+Json}}
+\index{add\+User\+To\+Json@{add\+User\+To\+Json}!Json\+Utils@{Json\+Utils}}
+\subsubsection{\texorpdfstring{add\+User\+To\+Json()}{addUserToJson()}}
+{\footnotesize\ttfamily void Json\+Utils\+::add\+User\+To\+Json (\begin{DoxyParamCaption}\item[{Q\+Json\+Object}]{user }\end{DoxyParamCaption})}
+
+
+
+Takes a newly created user and appends it to the users.\+json document. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classUser}{User}} & Object of type Q\+Json Object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classJsonUtils_aec5239b893c527428ed31a7ba05eba97}\label{classJsonUtils_aec5239b893c527428ed31a7ba05eba97}} 
+\index{Json\+Utils@{Json\+Utils}!decode\+Profile\+Picture@{decode\+Profile\+Picture}}
+\index{decode\+Profile\+Picture@{decode\+Profile\+Picture}!Json\+Utils@{Json\+Utils}}
+\subsubsection{\texorpdfstring{decode\+Profile\+Picture()}{decodeProfilePicture()}}
+{\footnotesize\ttfamily Q\+Pixmap Json\+Utils\+::decode\+Profile\+Picture (\begin{DoxyParamCaption}\item[{Q\+Json\+Value}]{pic }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{classJsonUtils_aec5239b893c527428ed31a7ba05eba97}{Json\+Utils\+::decode\+Profile\+Picture}, Takes a Q\+Json\+Value corresponding to a picture, decodes it, and returns the corresponding Q\+Pixmap. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pic} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Q\+Json\+Value for the decoded image 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJsonUtils_ae1a169f74290c719847414f70d2cf970}\label{classJsonUtils_ae1a169f74290c719847414f70d2cf970}} 
+\index{Json\+Utils@{Json\+Utils}!encode\+Profile\+Picture@{encode\+Profile\+Picture}}
+\index{encode\+Profile\+Picture@{encode\+Profile\+Picture}!Json\+Utils@{Json\+Utils}}
+\subsubsection{\texorpdfstring{encode\+Profile\+Picture()}{encodeProfilePicture()}}
+{\footnotesize\ttfamily Q\+Json\+Value Json\+Utils\+::encode\+Profile\+Picture (\begin{DoxyParamCaption}\item[{Q\+Pixmap \&}]{p }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{classJsonUtils_ae1a169f74290c719847414f70d2cf970}{Json\+Utils\+::encode\+Profile\+Picture}, Takes a picture, encodes it, and returns the corresponding hashed Q\+Json\+Value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p,picture} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Q\+Json\+Value for the encoded image 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJsonUtils_a119512273e8b9dc8ea46e88811479705}\label{classJsonUtils_a119512273e8b9dc8ea46e88811479705}} 
+\index{Json\+Utils@{Json\+Utils}!get\+Json\+Document@{get\+Json\+Document}}
+\index{get\+Json\+Document@{get\+Json\+Document}!Json\+Utils@{Json\+Utils}}
+\subsubsection{\texorpdfstring{get\+Json\+Document()}{getJsonDocument()}}
+{\footnotesize\ttfamily Q\+Json\+Document Json\+Utils\+::get\+Json\+Document (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the Json\+Document of the file path. 
+
+\begin{DoxyReturn}{Returns}
+Q\+Json\+Document of the file path 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJsonUtils_aa59b55bcdf1b0a9ab2726d1da6cf9eb8}\label{classJsonUtils_aa59b55bcdf1b0a9ab2726d1da6cf9eb8}} 
+\index{Json\+Utils@{Json\+Utils}!update\+Scores@{update\+Scores}}
+\index{update\+Scores@{update\+Scores}!Json\+Utils@{Json\+Utils}}
+\subsubsection{\texorpdfstring{update\+Scores()}{updateScores()}}
+{\footnotesize\ttfamily void Json\+Utils\+::update\+Scores (\begin{DoxyParamCaption}\item[{Q\+String}]{username,  }\item[{Q\+Vector$<$ int $>$}]{scores,  }\item[{int}]{highscore,  }\item[{int}]{game\+Identifier }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{classJsonUtils_aa59b55bcdf1b0a9ab2726d1da6cf9eb8}{Json\+Utils\+::update\+Scores}, Update the \hyperlink{classUser}{User} Scores in the Json object of the \hyperlink{classUser}{User}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username,username} & of \hyperlink{classUser}{User} \\
+\hline
+{\em scores,scores} & Arraylist of user \\
+\hline
+{\em highscore,User\textquotesingle{}s} & Highscore \\
+\hline
+{\em game\+Identifier,0} & for game1 and 1 for game2 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classJsonUtils_ae71b2b3eeaf9d1d0a7dce02cec7684ea}\label{classJsonUtils_ae71b2b3eeaf9d1d0a7dce02cec7684ea}} 
+\index{Json\+Utils@{Json\+Utils}!validate\+User@{validate\+User}}
+\index{validate\+User@{validate\+User}!Json\+Utils@{Json\+Utils}}
+\subsubsection{\texorpdfstring{validate\+User()}{validateUser()}}
+{\footnotesize\ttfamily Q\+Json\+Object Json\+Utils\+::validate\+User (\begin{DoxyParamCaption}\item[{Q\+String \&}]{username,  }\item[{Q\+String \&}]{password }\end{DoxyParamCaption})}
+
+
+
+Checks if a user who attempted to login has already signed up before. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username,username} & of user \\
+\hline
+{\em password,password} & of user \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If the login was successful, returns the user as a Q\+Json\+Object.\+Else returns an empty Q\+J\+Son\+Object 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Accounts\+\_\+\+Framework/jsonutils.\+h\item 
+Accounts\+\_\+\+Framework/jsonutils.\+cpp\end{DoxyCompactItemize}

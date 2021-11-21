@@ -1,0 +1,18 @@
+<map id="AppMainView" name="AppMainView">
+<area shape="rect" id="node11" href="$classGame1View.html" title="Game1View" alt="" coords="831,397,924,424"/>
+<area shape="rect" id="node16" href="$classGame2View.html" title="Game2View" alt="" coords="831,639,924,665"/>
+<area shape="rect" id="node3" href="$classLandingPage.html" title="LandingPage" alt="" coords="573,99,670,125"/>
+<area shape="rect" id="node8" href="$classSignupPage.html" title="SignupPage" alt="" coords="575,219,667,245"/>
+<area shape="rect" id="node12" href="$classQuestionPage.html" title="QuestionPage" alt="" coords="404,5,508,32"/>
+<area shape="rect" id="node14" href="$classcommandPanel.html" title="commandPanel" alt="" coords="245,324,357,351"/>
+<area shape="rect" id="node5" href="$classJsonUtils.html" title="JsonUtils" alt="" coords="44,464,121,491"/>
+<area shape="rect" id="node6" href="$classUser.html" title="User" alt="" coords="276,595,327,621"/>
+<area shape="rect" id="node9" href="$classmainPage.html" title="mainPage" alt="" coords="581,793,661,820"/>
+<area shape="rect" id="node18" href="$classGame2GamePage.html" title="Game2GamePage" alt="" coords="557,940,686,967"/>
+<area shape="rect" id="node13" href="$classGame1WelcomePage.html" title="Game1WelcomePage" alt="" coords="547,448,696,475"/>
+<area shape="rect" id="node17" href="$classGame2WelcomePage.html" title="Game2WelcomePage" alt="" coords="547,663,696,689"/>
+<area shape="rect" id="node19" href="$classLowerPanelButton.html" title="LowerPanelButton" alt="" coords="237,1001,365,1028"/>
+<area shape="rect" id="node21" href="$classDisk.html" title="Disk" alt="" coords="277,1103,326,1129"/>
+<area shape="rect" id="node22" href="$classmissedDiskZone.html" title="missedDiskZone" alt="" coords="241,1052,361,1079"/>
+<area shape="rect" id="node15" href="$classGame1GamePage.html" title="Game1GamePage" alt="" coords="557,347,686,373"/>
+</map>

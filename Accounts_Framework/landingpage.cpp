@@ -1,9 +1,3 @@
-#include "landingpage.h"
-#include <QWidget>
-#include <QtWidgets>
-#include <QFont>
-#include <Accounts_Framework/user.h>
-
 /**
 * \file LandingPage.cpp
 * \brief contains definition of landing page that is displayed when user accesses the app.
@@ -11,6 +5,13 @@
 * \author Karim Zarzour
 * \author Maarouf Yassine
 */
+
+#include "landingpage.h"
+#include <QWidget>
+#include <QtWidgets>
+#include <QFont>
+#include <Accounts_Framework/user.h>
+
 
 /**
  * @brief LandingPage::LandingPage, sets the geometry of all widgets and labels. Adds them to the scene
