@@ -19,7 +19,7 @@
  */
 LandingPage::LandingPage(QWidget *parent) : QWidget(parent)
 {
-    welcomeLabel= new QLabel("Welcome");
+    welcomeLabel= new QLabel("Welcome To QT Gaming Framework!");
     welcomeLabel->setAlignment(Qt::AlignCenter);
     QFont welcomeLabelFont("Arial", 20, QFont::Bold);
     welcomeLabel->setFont(welcomeLabelFont);
